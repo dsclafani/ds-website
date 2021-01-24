@@ -15,4 +15,4 @@ output:
 site: distill::distill_website
 ---
  
-I am a first year MESM student at the Bren School for Environmental Science & Management.
+I am a first year MESM student at the Bren School for Environmental Science & Management specializing in Energy and Climate.
