@@ -1,6 +1,6 @@
 ---
-title: "Dani"
-image: "mehike.jpg"
+title: "Bennie"
+image: "bennie.jpg"
 links:
   - label: LinkedIn
     url: "https://linkedin.com/"
@@ -12,7 +12,6 @@ links:
     url: "mailto:email@email.com"
 output:
   postcards::jolla
-site: distill::distill_website
 ---
  
-I am a first year MESM student at the Bren School for Environmental Science & Management.
+Bennie is a 10 week old goldendoodle puppy who loves to eat sticks, chew bones, and snuggle with his best friend Lilly.
