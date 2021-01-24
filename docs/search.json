@@ -1,0 +1,20 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About this site",
+      "description": "Some additional details about the website",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2021-01-24T10:59:52-08:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Bennie",
+      "author": [],
+      "contents": "\n\n          \n      \n      Dani's Website\n      \n      \n      Home\n      About\n      ☰\n      \n      \n      \n        \n          \n            Bennie\n          \n          \n            \n              Bennie is a 10 week old goldendoodle puppy who loves to eat sticks, chew bones, and snuggle with his best friend Lilly.\n            \n            \n              Bennie is a 10 week old goldendoodle puppy who loves to eat sticks, chew bones, and snuggle with his best friend Lilly.\n            \n          \n\n          \n            \n              \n                  \n                    \n                      LinkedIn\n                    \n                  \n                \n                                \n                  \n                    \n                      Twitter\n                    \n                  \n                \n                                \n                  \n                    \n                      GitHub\n                    \n                  \n                \n                                \n                  \n                    \n                      Email\n                    \n                  \n                \n                              \n          \n\n          \n            \n              \n                                \n                  \n                    LinkedIn\n                  \n                \n                                \n                  \n                    Twitter\n                  \n                \n                                \n                  \n                    GitHub\n                  \n                \n                                \n                  \n                    Email\n                  \n                \n                              \n            \n          \n        \n      \n    \n\n    \n    \n    ",
+      "last_modified": "2021-01-24T10:59:52-08:00"
+    }
+  ],
+  "collections": []
+}
