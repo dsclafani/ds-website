@@ -1,5 +1,5 @@
 ---
-title: "Dani"
+title: "Dani Sclafani"
 image: "mehike.jpg"
 links:
   - label: LinkedIn
@@ -15,4 +15,4 @@ output:
 site: distill::distill_website
 ---
  
-I am a first year MESM student at the Bren School for Environmental Science & Management specializing in Energy and Climate.
+Dani is a first year MESM student at the Bren School for Environmental Science & Management specializing in Energy and Climate and Pollution, Prevention, & Remediation.
