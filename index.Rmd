@@ -3,13 +3,13 @@ title: "Dani"
 image: "mehike.jpg"
 links:
   - label: LinkedIn
-    url: "https://linkedin.com/"
+    url: "https://www.linkedin.com/in/danielle-sclafani-462518131/"
   - label: Twitter
     url: "https://twitter.com/"
   - label: GitHub
     url: "https://github.com/"
   - label: Email
-    url: "mailto:email@email.com"
+    url: "dsclafani@ucsb.edu"
 output:
   postcards::jolla
 site: distill::distill_website
