@@ -1,8 +1,8 @@
 [
   {
     "path": "posts/2021-02-07-welcome/",
-    "title": "welcome",
-    "description": "A short description of the post.",
+    "title": "Welcome",
+    "description": "I will post my favorite data visualizations I have created from class and TidyTuesdays.",
     "author": [
       {
         "name": "Danielle  Sclafani",
@@ -13,7 +13,7 @@
     "categories": [],
     "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
     "preview": {},
-    "last_modified": "2021-02-07T14:52:08-08:00",
-    "input_file": {}
+    "last_modified": "2021-02-07T19:00:34-08:00",
+    "input_file": "welcome.utf8.md"
   }
 ]
