@@ -3,6 +3,7 @@ title: "Dani's Website"
 description: |
   Dani's Website
 output_dir: "docs"
+theme: iyo.css
 navbar:
   right:
     - text: "Home"
