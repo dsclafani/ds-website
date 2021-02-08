@@ -86,29 +86,26 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>Dani's Website: About Dani</title>
+  <title>Dani's Website: Blog</title>
   
-  <meta property="description" itemprop="description" content="Some additional details about the website"/>
   
   
   
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Dani&#39;s Website: About Dani"/>
+  <meta property="og:title" content="Dani&#39;s Website: Blog"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="Some additional details about the website"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="Dani&#39;s Website"/>
   
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Dani&#39;s Website: About Dani"/>
-  <meta property="twitter:description" content="Some additional details about the website"/>
+  <meta property="twitter:title" content="Dani&#39;s Website: Blog"/>
   
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description"]}},"value":[{"type":"character","attributes":{},"value":["About Dani"]},{"type":"character","attributes":{},"value":["Some additional details about the website"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","listing"]}},"value":[{"type":"character","attributes":{},"value":["Blog"]},{"type":"character","attributes":{},"value":["posts"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2047,12 +2044,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 </head>
 
-<body>
+<body class="layout-listing">
 
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"About Dani","description":"Some additional details about the website","authors":[]}
+{"title":"Blog","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2075,36 +2072,174 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
+<!--radix_placeholder_article_listing-->
+
+
+<script type="application/javascript">
+
+function init_posts_list() {
+
+  function load_image(img) {
+    var src = $(img).attr('data-src');
+    if (src) {
+      $(img).attr('src', src);
+      $(img).load(function() {
+        img.removeAttribute('data-src');
+      });
+    }
+  }
+
+  function set_posts_visible(posts, visible) {
+    if (visible) {
+
+      // show bottom border by default
+      $(posts).removeClass('post-preview-last');
+
+      // apply limits if need be
+      var max_posts = 25;
+      var apply_limits = $('.posts-container').hasClass('posts-apply-limit');
+      if (apply_limits && posts.length > max_posts) {
+        posts = $(posts).slice(0, max_posts);
+      } else {
+        $('.posts-more a').addClass('hidden');
+      }
+
+      // apply last style
+      $(posts.slice(-1)[0]).addClass('post-preview-last');
+
+      $(posts).removeClass('hidden');
+      $(posts).find('img[data-src]').each(function(i, img) {
+        load_image(img);
+      });
+    } else {
+      $(posts).addClass('hidden');
+    }
+  }
+
+  function apply_hash_filter() {
+
+    // clear active state
+    $('.categories .active').removeClass('active');
+
+    // mark all posts invisible to start
+    set_posts_visible($('.posts-list').children('a'), false);
+
+    // if we have a hash filter
+    if (window.location.hash && window.location.hash.startsWith("#category:")) {
+
+      // mark posts that match the category visible
+      var page_category = window.location.hash.replace(/^#category:/, "");
+      var posts = $('.post-metadata').map(function(idx, script) {
+        var metadata = $.parseJSON($(script).html());
+        var post = null;
+        $.each(metadata.categories, function(idx, category) {
+          category = category.replace(/ /g,"_");
+          if ((page_category || '').toLowerCase() === "articles" || category === page_category) {
+            post = $(script).parent().get();
+            return false;
+          }
+        });
+        return post;
+      });
+      set_posts_visible(posts, true);
+
+      // mark the hash active
+      $('.categories li>a[href="' + window.location.hash + '"]').addClass('active');
+
+      // update the list_caption
+      var list_caption = $('.posts-list-caption');
+      var caption = (page_category || '').toLowerCase() === "articles"
+        ? list_caption.attr('data-caption')
+        : ('Category: ' + page_category.replace(/_/g," "));
+      list_caption.text(caption);
+
+    } else {
+
+      // no hash filter, make all posts visible (subject to max display)
+      set_posts_visible($('.posts-list').children(), true);
+
+      // reset list caption
+      var list_caption = $('.posts-list-caption');
+      list_caption.text(list_caption.attr('data-caption'));
+
+
+    }
+  }
+
+  // more articles
+  function apply_post_limits(apply) {
+    if (apply) {
+      $('.posts-container').addClass('posts-apply-limit');
+      $('.posts-more a').removeClass('hidden');
+    } else {
+      $('.posts-container').removeClass('posts-apply-limit');
+      $('.posts-more a').addClass('hidden');
+    }
+  }
+
+  // click handling for tags
+  $('.dt-tag').click(function(ev) {
+    window.location.hash = '#category:' + $(this).text().replace(/ /g, "_");
+    return false;
+  })
+
+  // hash filter handling
+  apply_hash_filter();
+  $(window).on('hashchange',function() {
+    apply_post_limits(true);
+    apply_hash_filter();
+  });
+
+  // more articles link
+  $('.posts-more a').click(function(e) {
+    e.preventDefault();
+    apply_post_limits(false);
+    apply_hash_filter();
+    return false;
+  });
+
+}
+
+</script>
+
+
+
+<div class="posts-container posts-apply-limit l-page">
+<div class="posts-list">
+<h1 class="posts-list-caption" data-caption="Blog">Blog</h1>
+<a href="posts/2021-02-07-welcome/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":[]}</script>
+<div class="metadata">
+<div class="publishedDate">Feb. 7, 2021</div>
+<div class="dt-authors">
+<div class="dt-author">Danielle  Sclafani</div>
+</div>
+</div>
+<div class="thumbnail">
+<img/>
+</div>
+<div class="description">
+<h2>welcome</h2>
+<div class="dt-tags"></div>
+<p>A short description of the post.</p>
+</div>
+</a>
+</div>
+<div class="posts-more">
+<a href="#">More articles &raquo;</a>
+</div>
+</div>
+<!--/radix_placeholder_article_listing-->
 
 <div class="d-title">
-<h1>About Dani</h1>
+<h1>Blog</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>Some additional details about the website</p></p>
+
 </div>
 
 
 <div class="d-article">
-<h3 id="background">Background</h3>
-<p>Dani Sclafani is originally from Mendham, New Jersey where she grew up with her two siblings Sal and Katie.</p>
-<p>Dani is a member Bucknell University’s graduating Class of 2019, where she obtained a Bachelor of Arts in International Relations. The first year after graduating from Bucknell Dani lived and worked in New York City at Horizon-Next, a full service media agency, as an assistant brand strategist.</p>
-<p>In September 2020, Dani moved to Santa Barbara, California to begin her Master’s degree at the Bren School for Environmental Science &amp; Management where she will be specializing in Energy and Climate, and Pollution, Prevention, &amp; Remediation. Upon graduating from Bren, Dani hopes to begin a career in energy consulting or corporate environmenal management.</p>
-<h3 id="interests">Interests</h3>
-<p>Before the outbreak of COVID-19, Dani enjoyed traveling the world with her sister Katie and friends. Their most recent roadtrip was from Lake Como, Italy to Nice, France before returning to Vienna, Austria for Katie’s graduation from the University of Vienna’s Master of Human Rights program.</p>
-<div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-1"></span>
-<img src="pics/kate_grad.jpg" alt="Katie recieving her Masters in Human Rights from the Univseristy of Vienna in October 2019. 
- #Proud sister moment!" width="50%" />
-<p class="caption">
-Figure 1: Katie recieving her Masters in Human Rights from the Univseristy of Vienna in October 2019. #Proud sister moment!
-</p>
-</div>
-</div>
-<p>Previous to this trip, Dani lived in Prague, Czech Republic for five months to study at Charles University and traveled to neighboring countries during her stay there. In 2017, Dani traveled to Cape Town, South Africa with a group of Bucknell students to study the Economics and Politics of South Africa in the post-Apartheid era. Dani also interned at Cape Town Partnership, a social inclusion non-profit, while in South Africa. Dani hopes to continue to explore the world once it is safe to travel again.</p>
-<p>Dani’s favorite hobby is horseback riding, and she has been riding since she was six years old. While an undergraduate, Dani was a member of Bucknell’s equestrian team for four years and continues to ride whenever she can.</p>
-<p>Dani also enjoys hiking, bird watching, going to the beach, cooking, and hanging out with her new dog Bennie.</p>
-<h3 id="data-science-experience">Data Science Experience</h3>
-<p>As an assistant Brand Strategist at Horizon-Next I used excel to evaluate client data and create data visualizations before pasting them into a powerpoint deck. While at Bren I have learned to use R and GitHub, and with these tools the importance of data reproducibility. Although at Horizon I used excel templates and could easily refresh the document to pull in new data, the level of reproducibility for anyone other than the two team members who created the documents was non-existent. Through my data science courses at Bren I have learned to use the <code>tidyverse</code> package to easily analyze data produce visualizations.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

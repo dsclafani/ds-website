@@ -4,10 +4,8 @@ image: "mehike.jpg"
 links:
   - label: LinkedIn
     url: "https://www.linkedin.com/in/danielle-sclafani-462518131/"
-  - label: Twitter
-    url: "https://twitter.com/"
   - label: GitHub
-    url: "https://github.com/"
+    url: "https://github.com/dsclafani"
   - label: Email
     url: "dsclafani@ucsb.edu"
 output:

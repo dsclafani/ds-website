@@ -2,19 +2,13 @@
 title: "Bennie"
 image: "ben1.jpg"
 links:
-  - label: LinkedIn
-    url: "https://linkedin.com/"
   - label: Instagram
     url: "https://www.instagram.com/bennie_my_dood/"
-  - label: GitHub
-    url: "https://github.com/"
-  - label: Email
-    url: "mailto:email@email.com"
 output:
   postcards::jolla
 ---
  
-Bennie is a 10 week old goldendoodle puppy who loves to eat sticks, chew bones, and snuggle with his best friend Lilly.
+Bennie is a 12 week old goldendoodle puppy who loves to eat sticks, chew bones, and snuggle with his best friend Lilly. Check out my Instagram!
 
 
 ```{r, echo = FALSE, out.width= "50%", fig.align='center'}
