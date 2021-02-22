@@ -12,12 +12,12 @@ knitr::opts_chunk$set(echo = FALSE)
 
 Dani Sclafani is originally from Mendham, New Jersey where she grew up with her two siblings Sal and Katie. 
 
-Dani is a member Bucknell University's graduating Class of 2019, where she obtained a Bachelor of Arts in International Relations. The first year after graduating from Bucknell Dani lived and worked in New York City at Horizon-Next, a full service media agency, as an assistant brand strategist. 
+Dani is a member Bucknell University's graduating Class of 2019, where she obtained a Bachelor of Arts in International Relations. The first year after graduating from Bucknell Dani lived and worked in New York City at Horizon-Next, a full service media agency, as an Assistant Brand Strategist. 
 
 In September 2020, Dani moved to Santa Barbara, California to begin her Master's degree at the Bren School for Environmental Science & Management where she will be specializing in Energy and Climate, and Pollution, Prevention, & Remediation. Upon graduating from Bren, Dani hopes to begin a career in energy consulting or corporate environmenal management.
 
 ### Interests
-Before the outbreak of COVID-19, Dani enjoyed traveling the world with her sister Katie and friends. Their most recent roadtrip was from Lake Como, Italy to Nice, France before returning to Vienna, Austria for Katie's graduation from the University of Vienna's Master of Human Rights program. 
+Before the outbreak of COVID-19, Dani enjoyed traveling with her sister Katie and friends. Their most recent roadtrip was from Lake Como, Italy to Nice, France before returning to Vienna, Austria for Katie's graduation from the University of Vienna's Master of Human Rights program. 
 
 
 ```{r, echo = FALSE, out.width= "50%", fig.align='center', fig.cap= "Katie recieving her Masters in Human Rights from the Univseristy of Vienna in October 2019. \n #Proud sister moment!"}
@@ -31,12 +31,12 @@ In 2017, Dani traveled to Cape Town, South Africa with a group of Bucknell stude
 
 Dani's favorite hobby is horseback riding, and she has been riding since she was six years old. While an undergraduate, Dani was a member of Bucknell's equestrian team for four years and continues to ride whenever she can.
 
-Dani also enjoys hiking, bird watching, going to the beach, cooking, and hanging out with her new dog Bennie.
+Dani also enjoys hiking, bird watching, gardening, cooking, and hanging out with her new dog Bennie.
 
 
 ### Data Science Experience
 
-As an assistant Brand Strategist at Horizon-Next I used excel to evaluate client data and create data visualizations before pasting them into a powerpoint deck. While at Bren I have learned to use R and GitHub, and with these tools the importance of data reproducibility. Although at Horizon I used excel templates and could easily refresh the document to pull in new data, the level of reproducibility for anyone other than the two team members who created the documents was non-existent. 
-Through my data science courses at Bren I have learned to use the `tidyverse` package to easily analyze data produce  visualizations. 
+As an Assistant Brand Strategist at Horizon-Next Dani used excel to evaluate client data and create data visualizations for weekly client presentations. Dani learned R and GitHub while at Bren, and hopes to continue to improve on these skills by participating in Tidy Tuesdays and eventually branch out into additional coding platforms.
+
 
 
