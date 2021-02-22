@@ -8,7 +8,7 @@ output:
   postcards::jolla
 ---
  
-Bennie is a 12 week old goldendoodle puppy who loves to eat sticks, chew bones, and snuggle with his best friend Lilly. Check out my Instagram!
+Bennie is a 14 week old goldendoodle puppy who loves to eat sticks, chew bones, and snuggle with his best friend Lilly. Check out my Instagram!
 
 
 ```{r, echo = FALSE, out.width= "50%", fig.align='center'}
