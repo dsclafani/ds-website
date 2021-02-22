@@ -1,7 +1,7 @@
 ---
 title: "Welcome"
 description: |
-  I will post my favorite data visualizations I have created from class and TidyTuesdays.
+  I will post some of my favorite data visualizations I have created and their code here!.
 author:
   - name: Danielle  Sclafani
 date: 02-07-2021

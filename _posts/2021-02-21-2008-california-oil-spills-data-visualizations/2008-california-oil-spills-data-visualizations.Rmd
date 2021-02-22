@@ -1,0 +1,96 @@
+---
+title: "2008 California Oil Spills Data Visualizations"
+description: |
+  Interactive Map and Chloropleth visualizations.
+author:
+  - name: Danielle  Sclafani
+    url: {}
+date: 02-21-2021
+output:
+  distill::distill_article:
+    self_contained: false
+    code_folding: hide
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+library(sf)
+library(here)
+library(janitor)
+library(tmap)
+```
+
+### Background
+
+The Office of Spill Prevention and Response (OSPR) incident Tracking database provides data on the occurrence and location of marine and inland oil spills. An incident is classified as an oil spill if there is discharge or there is potential for discharge of deletious materials. 
+
+Data is provided by Oil Spill Incident Tracking [ds394]. (n.d.). Retrieved February 17, 2021, from https://gis.data.ca.gov/datasets/7464e3d6f4924b50ad06e5a553d71086_0/data
+
+
+### Initial Data Wrangling
+
+```{r, warning=FALSE, message=FALSE}
+
+# reading in the county data from shapefile in order to make a map
+ca_counties <- read_sf(here("oil_blog_post", "ca_counties"), layer = "CA_Counties_TIGER2016") %>% 
+  clean_names() %>% 
+  select(name)
+
+# st_crs(ca_counties) , checked the coordinate system, commented it out for sake of cleanness
+
+#reading in the oil spill data
+oil_data <- read_sf(here("oil_blog_post","oil_data"), layer = "Oil_Spill_Incident_Tracking_%5Bds394%5D") %>% 
+  clean_names()
+
+# st_crs(oil_data)
+
+# making sure the two data sets are set to the same crs
+ca_counties <- st_transform(ca_counties, st_crs(oil_data))
+```
+
+### Setting up the Interactive map
+```{r}
+tmap_mode("view")
+```
+
+### Creating the Interactive Map
+```{r, warning=FALSE,message=FALSE, fig.cap= "Figure 1.0:Oil Spills throughout California in 2008"}
+#making exploraory interactive map that shows location of oil spills in california
+tm_shape(oil_data)+
+  tm_dots(aes(color = "skyblue"), alpha = 0.4)
+```
+
+
+### Chloropleth Map
+
+#### Data Wrangling for Chloropleth Map: Finding counts of oil spills in each county
+
+```{r, warning=FALSE, message=FALSE}
+#need to find count of oil spills in each CA county. 
+# Step 1- join te data sets (since we already set the coordinate systems to match)
+
+oil_county <- ca_counties %>% 
+  st_join(oil_data)
+
+
+#step 2: getting the counts
+oil_counts <- oil_county %>% 
+  count(name)
+  
+```
+
+
+#### Creating the Chloropleth
+
+```{r, warning  = FALSE, message=FALSE, fig.cap= "Figure 2.0: Distribution of Oil Spills that occured in 2008 by county. As color gradient darkens, the number of oil spills increases per county"}
+# making the chloropleth
+
+ggplot(data = oil_counts) +
+  geom_sf(aes(fill = n), color = "white", size = 0.1) +
+  scale_fill_gradientn(colors = c("lightblue", "blue", "navyblue")) +
+  theme_minimal()+
+  labs( fill = "Number of Oil Spills")
+```
+
