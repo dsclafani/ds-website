@@ -57,11 +57,12 @@ tmap_mode("view")
 
 ### Creating the Interactive Map
 ```{r, warning=FALSE,message=FALSE}
-#making exploraory interactive map that shows location of oil spills in california
-tm_shape(oil_data)+
+#making exploratory interactive map that shows location of oil spills in california
+tm_basemap("Esri.WorldTopoMap")+
+  tm_shape(oil_data)+
   tm_dots(aes(color = "skyblue"), alpha = 0.4)
 ```
-
+**Figure 1.0:** Display of location of California oil spills in 2008.
 
 ### Chloropleth Map
 
@@ -84,7 +85,7 @@ oil_counts <- oil_county %>%
 
 #### Creating the Chloropleth
 
-```{r, warning  = FALSE, message=FALSE, fig.cap= "Figure 1.0: Distribution of Oil Spills that occured in 2008 by county. As color gradient darkens, the number of oil spills increases per county"}
+```{r, warning  = FALSE, message=FALSE, fig.cap= "**Figure 2.0:** Distribution of Oil Spills that occured in 2008 by county. As color gradient darkens, the number of oil spills increases per county"}
 # making the chloropleth
 
 ggplot(data = oil_counts) +
