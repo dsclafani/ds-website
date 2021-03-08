@@ -1,0 +1,55 @@
+﻿Process,Environmental Impact,Value
+Container Glass,Acidification,0.845714286
+Landfill,Acidification,0.015371429
+GLO: Steel tinplated worldsteel,Acidification,0.010457143
+Transportation,Acidification,0.025028571
+Transportation,Acidification,0.000788571
+Transportation,Acidification,0.09
+Diesel,Acidification,0.010914286
+Electricity,Acidification,6.85714E-05
+Lubricants,Acidification,3.65714E-07
+Container Glass,Ecotoxicity,0.353846154
+Landfill,Ecotoxicity,0.029471154
+GLO: Steel tinplated worldsteel,Ecotoxicity,0.060096154
+Transportation,Ecotoxicity,4.08654E-08
+Transportation,Ecotoxicity,1.49038E-09
+Transportation,Ecotoxicity,1.70192E-07
+Diesel,Ecotoxicity,0.557692308
+Electricity,Ecotoxicity,0.000169712
+Lubricants,Ecotoxicity,1.55288E-05
+Container Glass,Eutrophication,0.756476684
+Landfill,Eutrophication,0.012020725
+GLO: Steel tinplated worldsteel,Eutrophication,0.012435233
+Transportation,Eutrophication,0.029015544
+Transportation,Eutrophication,0.000911917
+Transportation,Eutrophication,0.104145078
+Diesel,Eutrophication,0.08238342
+Electricity,Eutrophication,9.43005E-05
+Lubricants,Eutrophication,5.59585E-07
+Container Glass,Global Warming Air,0.821782178
+Landfill,Global Warming Air,0.012937294
+GLO: Steel tinplated worldsteel,Global Warming Air,0.024587459
+Transportation,Global Warming Air,0.026072607
+Transportation,Global Warming Air,0.000856436
+Transportation,Global Warming Air,0.097689769
+Diesel,Global Warming Air,0.015561056
+Electricity,Global Warming Air,0.000260726
+Lubricants,Global Warming Air,1.21452E-06
+Container Glass,Smog Air,0.783486239
+Landfill,Smog Air,0.018715596
+GLO: Steel tinplated worldsteel,Smog Air,0.011082569
+Transportation,Smog Air,0.037431193
+Transportation,Smog Air,0.001179817
+Transportation,Smog Air,0.134495413
+Diesel,Smog Air,0.013211009
+Electricity,Smog Air,6.27523E-05
+Lubricants,Smog Air,4.56881E-07
+Container Glass,Human Toxicity,0.646011765
+Landfill,Human Toxicity,0.209631504
+GLO: Steel tinplated worldsteel,Human Toxicity,0.014841964
+Transportation,Human Toxicity,1.50843E-07
+Transportation,Human Toxicity,5.50154E-09
+Transportation,Human Toxicity,6.26657E-07
+Diesel,Human Toxicity,0.128086805
+Electricity,Human Toxicity,9.52848E-05
+Lubricants,Human Toxicity,3.27044E-06

@@ -1,0 +1,88 @@
+---
+title: "Life Cycle Assessment: Plastic, Glass, & Aluminium Containers"
+description: |
+  Contribution Analysis from GaBi Education Database.
+author:
+  - name: Danielle  Sclafani
+    url: {}
+date: 03-07-2021
+output:
+  distill::distill_article:
+    self_contained: false
+    code_folding: hide
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+library(here)
+library(janitor)
+library(gt)
+library(patchwork)
+```
+
+### Introduction
+
+Using a functional unit of 1 Liter of beverage, an LCA is conducted for a glass bottle, a PET bottle and an Aluminium can using the GaBi Education database. The reference flows for each container is listed in Table 1.0.
+
+```{r}
+#reading in reference flow data
+ref_flow <- read_csv(here("lca blog", "reference_flow.csv"))
+```
+
+
+```{r}
+ref_flow %>% gt %>% 
+  tab_header(
+    title = "Reference Flows",
+    subtitle = "Mass of each container needed to hold 1 Liter of beverage"
+  ) %>% 
+  tab_footnote(
+    footnote = "Reference flows decided on by Professor Geyer's measurements from ESM 273",
+    locations = cells_title() 
+  ) %>% 
+  cols_label(
+    Container = " "
+  ) %>% 
+  cols_align(align = "center") 
+```
+**Table 1.0:** Reference Flows of Glass Bottle, PET Bottle, and Aluminium can used in life cycle assessment. Glass Bottle contains a steel cap, weighing 5 grams. PET Bottle uses 4 gram PP cap. 
+
+
+### Contribution Analysis
+
+```{r}
+# reading in the csvs of GaBi data for each life cycle
+
+alum_can4 <- read_csv(here("lca blog", "alum_can4.csv")) %>% 
+  clean_names()
+
+pet_bottle <- read_csv(here("lca blog", "pet_data.csv")) %>% 
+  clean_names()
+
+glass_data <- read_csv(here("lca blog", "glass.csv")) %>% 
+  clean_names()
+```
+
+```{r}
+ ggplot(data = pet_bottle, aes(x = environmental_impact, y = value)) + geom_col(aes(fill = process))+
+  theme_minimal()+
+  coord_flip()+
+  labs(x = "", y = "Percent", fill = "Unit Process", title = "PET Bottle")+
+  theme(plot.title = element_text(hjust = 0.5))
+
+ggplot(data = glass_data, aes(x = environmental_impact, y = value)) + geom_col(aes(fill = process))+
+  theme_minimal()+
+  coord_flip()+
+  labs(x = "", y = "Percent", fill = "Unit Process", title = "Glass Bottle")+
+  theme(plot.title = element_text(hjust = 0.5))
+
+ggplot(data = alum_can4, aes(x = environmental_impact, y = value)) + geom_col(aes(fill = process))+
+  theme_minimal()+
+  coord_flip()+
+  labs(x = "", y = "Percent", fill = "Unit Process", title = "Aluminium Can")+
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+Contributional analysis shows the unit processes that contribute most to the environmental impact categories of interest. 

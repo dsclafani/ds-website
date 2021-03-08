@@ -1,6 +1,6 @@
 ---
 title: "Dani Sclafani"
-image: "mehike.jpg"
+image: "benandme.JPG"
 links:
   - label: LinkedIn
     url: "https://www.linkedin.com/in/danielle-sclafani-462518131/"
