@@ -29,7 +29,7 @@ library(tigris)
 
 ## Tidy Tuesday Data Visualization
 
-Using the data provided by Tidy Tuesday, change in global plastic pollution from 2019-2020 is explored for the ten countries with the highest amount of plastic pollution.
+Using the data provided by Tidy Tuesday, change in global plastic pollution from 2019-2020 is explored for the ten countries with the greatest amount of plastic pollution.
 
 
 ### Reading in Data from TidyTuesday
@@ -70,7 +70,7 @@ combine_df <- right_join(sum19_country, sum20_country, by = "country") %>%
 
 ```
 
-##### Data Visualization
+#### Data Visualization
 ```{r}
 plot <- ggplot(data = combine_df, aes(y = reorder(country, abs(difference)), x = total_2019, xend = total_2020, 
                                       colour = diff_group)) +
