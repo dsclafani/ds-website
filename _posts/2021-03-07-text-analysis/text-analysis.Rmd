@@ -1,7 +1,7 @@
 ---
 title: "Text Analysis"
 description: |
-  Text Analysis of Stephenie Meyer's Twilight
+  Text Analysis of Stephenie Meyer's *Twilight*
 author:
   - name: Danielle  Sclafani
     url: {}
@@ -9,7 +9,7 @@ date: 03-07-2021
 output:
   distill::distill_article:
     self_contained: false
-    code_folding: hide
+    code_folding: show
 ---
 
 
@@ -23,9 +23,14 @@ library(ggwordcloud)
 library(here)
 ```
 
-## Text Analysis of Stephenie Meyer's Twilight
+## Text Analysis of Stephenie Meyer's *Twilight*
+
+Using text analysis skills within the 'tidytext' and 'textdata' packages the frequency of the occurence of words within the chapters of Twilight is able to be determined and analyzed. The use of Sentiment Lexicons provides context into the overall feeling of sections of the novel, providing an overall glimpse of how the theme develops. 
+First the data is read in through a pdf found online (citation below). The data is then looked at and wrangled to allow for easier presentation.
 
 ### Data Wrangling
+
+
 ```{r, cache= TRUE}
 # loading in the data
 twilight <- pdf_text(here("twilight post", "1-stephenie-meyer-twilight.pdf"))
@@ -85,6 +90,7 @@ twl_df <- twl_tidy %>%
 
 
 
+##### Finding the word out by Chapter, removing stop words, and then finding the top ten and top 5 words for each chapter
 
 ```{r, warning = FALSE, message=FALSE}
 #getting word counts by chapter
@@ -119,6 +125,7 @@ top_5 <- nostop_counts %>%
 ```
 
 
+##### Visualizing the wordcount per chapter of the top 5 words
 
 ```{r, warning = FALSE, message = FALSE, include = FALSE}
 # lets look at this data
@@ -129,7 +136,7 @@ ggplot(data = top_5, aes(x = word, y = n)) +
   coord_flip()
 ```
 
-
+##### Removing character names from word count
 
 ```{r, warning = FALSE, message = FALSE}
 # many of the top 5 words are names, so going to remove names by creating a vector of the main characters names in order to get more accurate sentiments, villians names are ommitted from this list because important
@@ -144,7 +151,9 @@ no_names <- twl_no_stop %>%
 
 ```
 
-```{r, message = FALSE, warning=FALSE, include=FALSE}
+##### Creating a Visualization of the top 5 words in each chapter excluding character names
+
+```{r, message = FALSE, warning=FALSE, include=TRUE}
 #making a visualization without names - includes all chapters
 
 counts_no_name <- no_names %>% 
@@ -163,6 +172,8 @@ ggplot(data = no_name_top5, aes(x = word, y = n)) +
 ```
 
 ### Visualization of Word Count when Twilight is broken into Beginning, Middle, and End parts
+
+##### Data Wrangling
 
 ```{r, warning=FALSE, message=FALSE}
 #breaking the book into parts-  beginning, middle and end
@@ -189,10 +200,11 @@ part_top10$part_reorder = factor(part_top10$part, levels = c("Beginning", "Middl
 ```
 
 
+##### Graphing the top ten words for each section of the novel: Beginning, Middle, and End
 
-```{r, warning = FALSE, message = FALSE, fig.cap = "Figure 1.0: Chapters of Stephenie Meyer's Twilight are categorized into Beginning, Middle, and End parts by dividing the chapters evenly. The 10 most frequent words written in each part are displayed"}
+```{r, warning = FALSE, message = FALSE, fig.cap = "Figure 1.0: Chapters of Stephenie Meyer's Twilight are categorized into Beginning, Middle, and End parts by dividing the chapters evenly. The 10 most frequent words written in each part are displayed. *Names of characters are excluded from word count to provide a more accurate representation of the plot.*"}
 
-ggplot(data = part_top10, aes(x = word, y = n)) +geom_col(fill = "cyan4") +
+ggplot(data = part_top10, aes(x = word, y = n)) +geom_col(fill = "skyblue") +
   facet_wrap(~part_reorder)+
   coord_flip()+
   theme_minimal()+
@@ -201,7 +213,6 @@ ggplot(data = part_top10, aes(x = word, y = n)) +geom_col(fill = "cyan4") +
 ```
 
 
-*Names of characters were excluded from analysis to allow for accurate analysis of overall tone of text.
 
 ## Sentiments
 
