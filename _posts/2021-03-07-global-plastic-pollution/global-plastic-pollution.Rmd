@@ -1,0 +1,106 @@
+---
+title: "Global Plastic Pollution"
+description: |
+  Tidy Tuesday Global Plastic Pollution Data Visualization
+author:
+  - name: Danielle  Sclafani
+    url: {}
+date: 03-07-2021
+output:
+  distill::distill_article:
+    self_contained: false
+    code_folding: hide
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(janitor)
+library(patchwork)
+library(ggalt)
+library(sf)
+library(ggtext)
+library(here)
+library(tmap)
+library(leaflet)
+library(tigris)
+```
+
+## Tidy Tuesday Data Visualization
+
+Using the data provided by Tidy Tuesday, change in global plastic pollution from 2019-2020 is explored for the ten countries with the highest amount of plastic pollution.
+
+
+### Reading in Data from TidyTuesday
+```{r}
+tuesdata <- tidytuesdayR::tt_load('2021-01-26')
+tuesdata <- tidytuesdayR::tt_load(2021, week = 5)
+plastics <- tuesdata$plastics
+```
+
+##### Data Wrangling
+```{r}
+#wrangling 2020 data
+sum20_country <- plastics %>% 
+  clean_names() %>% 
+  filter(country != "EMPTY") %>%
+  filter(year == "2020") %>% 
+  mutate(grand_total = as.numeric(grand_total)) %>% 
+  drop_na(grand_total) %>% 
+  group_by(country) %>% 
+  summarize(total_2020 = sum(grand_total))
+
+#wrangling 2019 data
+sum19_country <- plastics %>% 
+  clean_names() %>% 
+  filter(country != "EMPTY") %>%
+  filter(year == "2019") %>% 
+  mutate(grand_total = as.numeric(grand_total)) %>% 
+  drop_na(grand_total) %>% 
+  group_by(country) %>% 
+  summarize(total_2019 = sum(grand_total))
+
+#combining data frames and keeping top 10 countries with both years of data
+combine_df <- right_join(sum19_country, sum20_country, by = "country") %>% 
+  na.omit() %>% 
+  mutate(difference = total_2020 - total_2019, # how to find the difference between to columns
+         diff_group = as.factor(ifelse(total_2020 - total_2019 > 0, "Positive", "Negative"))) %>% #made a new column that stated whether the the grand total increased (positive) or decreased from 2019 to 2020
+  top_n(abs(difference), n =10)
+
+```
+
+##### Data Visualization
+```{r}
+plot <- ggplot(data = combine_df, aes(y = reorder(country, abs(difference)), x = total_2019, xend = total_2020, 
+                                      colour = diff_group)) +
+  geom_dumbbell(size = 1.5,
+                size_x = 3,
+                size_xend = 3,
+                colour_x = "cadetblue4",
+                colour_xend = "blue") +
+  scale_colour_manual(values = c("purple", "magenta")) +
+  scale_x_continuous(breaks = c(seq(0, 60000, 10000))) +
+  labs(title = "Change in Global Plastic Pollution",
+       subtitle = "Top ten countries with the greatest change in plastic pollution between <span style = 'color:cadetblue4'><b>2019</b></span> and <span style = 'color:blue'><b>2020</b></span>. <span style = 'color:magenta'><b>Increase</b></span> in pollution was less common than <span style = 'color:purple'><b>decline</b></span>. <br>",
+       caption = "\nSource: Break Free From Plastic | Visualization @nxrunning")+
+  theme(plot.background = element_rect(fill = "aliceblue", colour = "aliceblue"),
+        panel.background = element_rect(fill = "aliceblue"),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        axis.title = element_blank(),
+        legend.position = "none",
+        axis.ticks = element_line(colour = "antiquewhite4"),
+        axis.text = element_text(colour = "antiquewhite4", size = 10, face = "bold"),
+        plot.title = element_text(colour = "cornsilk4", size = 20, face = "bold"),
+        plot.title.position = "plot",
+        plot.subtitle = element_textbox_simple(
+          size = 11,
+          color = "antiquewhite4",
+          padding = margin(5,5,5,5),
+          margin = margin(0,0,0,0)),
+        plot.caption = element_text(colour = "antiquewhite2", size = 10, face = "bold", hjust = 0))
+
+plot
+```
+

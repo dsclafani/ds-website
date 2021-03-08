@@ -1,0 +1,282 @@
+---
+title: "Text Analysis"
+description: |
+  Text Analysis of Stephenie Meyer's Twilight
+author:
+  - name: Danielle  Sclafani
+    url: {}
+date: 03-07-2021
+output:
+  distill::distill_article:
+    self_contained: false
+    code_folding: hide
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(tidytext)
+library(textdata)
+library(pdftools)
+library(ggwordcloud)
+library(here)
+```
+
+## Text Analysis of Stephenie Meyer's Twilight
+
+### Data Wrangling
+```{r, cache= TRUE}
+# loading in the data
+twilight <- pdf_text(here("twilight post", "1-stephenie-meyer-twilight.pdf"))
+
+```
+
+```{r, message=FALSE, warning = FALSE}
+# initial data wrangling
+twl_tidy <- data.frame(twilight) %>% 
+  mutate(text_full = str_split(twilight, pattern = "\\n")) %>% 
+  unnest(text_full) %>% # each row becomes its own data 'observation'
+  mutate(text_full = str_trim(text_full))
+```
+
+
+```{r, warning = FALSE, message=FALSE}
+
+#more wrangling
+
+twl_df <- twl_tidy %>% 
+  slice(-(1:79)) %>% # cutting out the preface and the information. want to start at chapter 1
+  mutate(chapter = case_when( #using case when to get a new column that labels each row with its designated chapter
+    str_detect(text_full, pattern = "1. FIRST") ~ text_full,
+    str_detect(text_full, pattern = "2. OPEN")  ~ text_full,
+    str_detect(text_full, pattern = "3. PHENOM")  ~ text_full,
+    str_detect(text_full, pattern = "4. INVITATIONS")  ~ text_full,
+    str_detect(text_full, pattern = "5. BLOOD")   ~ text_full,
+    str_detect(text_full, pattern = "6. SCARY")  ~ text_full,
+    str_detect(text_full, pattern = "7. NIGHTMARE")   ~ text_full,
+    str_detect(text_full, pattern = "8. PORT")   ~ text_full,
+    str_detect(text_full, pattern = "9. THEORY")  ~ text_full,
+    str_detect(text_full, pattern = "10. INTERROGATION")  ~ text_full,
+    str_detect(text_full, pattern = "11. COMPLICATION")  ~ text_full,
+    str_detect(text_full, pattern = "12. BALANCING")  ~ text_full,
+    str_detect(text_full, pattern = "13. CONFESSIONS")  ~ text_full,
+    str_detect(text_full, pattern = "14. MIND")   ~ text_full,
+    str_detect(text_full, pattern = "15. THE")  ~ text_full,
+    str_detect(text_full, pattern = "16. CARLISLE") ~ text_full,
+    str_detect(text_full, pattern = "17. THE")  ~ text_full,
+    str_detect(text_full, pattern = "18. THE")  ~ text_full,
+    str_detect(text_full, pattern = "19. GOODBYES")  ~ text_full,
+    str_detect(text_full, pattern = "20. IMPAT")  ~ text_full,
+    str_detect(text_full, pattern = "21. PHONE")  ~ text_full,
+    str_detect(text_full, pattern = "22. HIDE")  ~ text_full,
+    str_detect(text_full, pattern = "23. THE")  ~ text_full,
+    str_detect(text_full, pattern = "24. AN") 
+               ~ text_full)
+    
+  ) %>% 
+  fill(chapter) %>% 
+  separate(col = chapter, into = c("no", "title"), sep = " ") %>% 
+  separate(col = no, into = c("no", "delete", sep = ".")) %>% 
+  select(text_full, no, title) %>% 
+  mutate(chapter = as.numeric(no)) # making sure the chapter column si read as numeric
+
+```
+
+
+
+
+```{r, warning = FALSE, message=FALSE}
+#getting word counts by chapter
+twl_tokens <- twl_df %>% 
+  unnest_tokens(word, text_full) %>% 
+  select(chapter, word)
+
+#twlight wordcount
+twl_count <- twl_tokens %>% 
+  count(chapter, word)
+
+#removing stop words
+twl_no_stop <- twl_tokens %>% 
+  anti_join(stop_words)
+
+
+#counting without stop words
+nostop_counts <- twl_no_stop %>% 
+  count(chapter, word)
+
+# finding top 5 words in each chapter
+
+top_10 <- nostop_counts %>% 
+  group_by(chapter) %>% 
+  arrange(-n) %>% 
+  slice(1:10)
+
+top_5 <- nostop_counts %>% 
+  group_by(chapter) %>% 
+  arrange(-n) %>% 
+  slice(1:5)
+```
+
+
+
+```{r, warning = FALSE, message = FALSE, include = FALSE}
+# lets look at this data
+
+ggplot(data = top_5, aes(x = word, y = n)) +
+  geom_col(fill = "purple")+
+  facet_wrap(~chapter, scales = "free")+
+  coord_flip()
+```
+
+
+
+```{r, warning = FALSE, message = FALSE}
+# many of the top 5 words are names, so going to remove names by creating a vector of the main characters names in order to get more accurate sentiments, villians names are ommitted from this list because important
+
+names_vector <- c("bella", "edward", "carlisle", "alice", "jasper", "jacob", "charlie", "mike", "jessica", "cullen", "emmett", "esme", "angela", "billy")
+
+name_df <- as.data.frame(names_vector) %>% 
+  rename(word = names_vector)
+
+no_names <- twl_no_stop %>% 
+  anti_join(name_df)
+
+```
+
+```{r, message = FALSE, warning=FALSE, include=FALSE}
+#making a visualization without names - includes all chapters
+
+counts_no_name <- no_names %>% 
+  count(chapter, word)
+
+no_name_top5 <- counts_no_name %>% 
+  group_by(chapter) %>% 
+  arrange(-n) %>% 
+  slice(1:5)
+
+ggplot(data = no_name_top5, aes(x = word, y = n)) +
+  geom_col(fill = "purple")+
+  facet_wrap(~chapter, scales = "free")+
+  coord_flip()
+
+```
+
+### Visualization of Word Count when Twilight is broken into Beginning, Middle, and End parts
+
+```{r, warning=FALSE, message=FALSE}
+#breaking the book into parts-  beginning, middle and end
+
+be_mid_end  <- no_names %>% 
+  mutate(part = case_when(
+    chapter %in% c(1, 2, 3, 4, 5, 6, 7, 8) ~ "Beginning",
+    chapter %in% c(9, 10, 11, 12, 13, 14, 15, 16) ~ "Middle",
+    chapter %in% c(17, 18, 19, 20, 21, 22, 23, 24) ~ "End"
+  ))
+
+counts_part <- be_mid_end %>% #counting how many times each word shows up in each part
+  count(part, word)
+
+part_top10 <- counts_part %>% 
+  group_by(part) %>% #grouping by part, and then arranging by highest to lowest frequency
+  arrange(-n) %>% 
+  slice(1:10) #cutting by top ten
+
+# visualizing word counts by part of the book
+
+part_top10$part_reorder = factor(part_top10$part, levels = c("Beginning", "Middle", "End")) # added this line into code to make sure that the graph showed up as beginning, middle, end - the default was beginning, end, middle
+
+```
+
+
+
+```{r, warning = FALSE, message = FALSE, fig.cap = "Figure 1.0: Chapters of Stephenie Meyer's Twilight are categorized into Beginning, Middle, and End parts by dividing the chapters evenly. The 10 most frequent words written in each part are displayed"}
+
+ggplot(data = part_top10, aes(x = word, y = n)) +geom_col(fill = "cyan4") +
+  facet_wrap(~part_reorder)+
+  coord_flip()+
+  theme_minimal()+
+  labs( x = " ", y ="Count", title = "Ten Most Frequent words in Beggining, Middle, \n and Ending of Twilight")+
+  theme(plot.title = element_text(hjust =0.5))
+```
+
+
+*Names of characters were excluded from analysis to allow for accurate analysis of overall tone of text.
+
+## Sentiments
+
+### Using Afinn Lexicon to find sentiment score of each chapter
+```{r, warning = FALSE, message=FALSE}
+twl_affin <- no_names %>% 
+  inner_join(get_sentiments("afinn"))
+
+afinn_counts <- twl_affin %>% 
+  count(chapter, value)
+
+#distribution of afinn score of each chapter
+distr_afinn <- ggplot(data = afinn_counts, aes(x = value, y =n))+
+  geom_col()+
+  facet_wrap(~chapter)
+
+# mean afinn score of each chapter
+mean_afinn <- twl_affin %>% 
+  group_by(chapter) %>% 
+  summarize(mean_afinn = mean(value))
+
+#visualization of mean afinn score for each chapter
+mean_afinn_graph <- ggplot(data = mean_afinn,
+       aes(x = fct_rev(as.factor(chapter)),
+           y = mean_afinn)) +
+  geom_col(fill = "skyblue")+
+  coord_flip()+
+  theme_light()+
+  labs(x = "Chapter", y = "Mean Sentiment Score", title = "Average Afinn Sentiment score of each Chapter")+
+  theme(plot.title = element_text(hjust =0.5))
+
+
+```
+
+
+```{r, message= FALSE, warning = FALSE, fig.cap="Figure 2.0: The average sentiment score of each Chapter of Twilight based on Afinn sentiment package."}
+mean_afinn_graph
+```
+The majority of chapters have a negative average sentiment score. However, as sentiments are ranked on a -5 to 5 scale, the overall tone of the book is not that negative. The spike of positive sentiment scores occurs around chapters 14, 15, and 16 which is the beginning of Edward and Bella's love story.
+
+### NRC Lexicon: Finding Overall Sentiments for Each Part of Twilight
+```{r, message = FALSE, warning = FALSE}
+#by part
+twl_nrc_part <- be_mid_end %>% 
+  inner_join(get_sentiments("nrc"))
+
+twl_nrc_part_counts <- twl_nrc_part %>% 
+  count(part, sentiment)
+
+top_nrc <- twl_nrc_part_counts %>% 
+  group_by(part) %>% 
+  arrange(-n) %>% 
+  slice(1:10)
+
+top_nrc$part_reorder = factor(top_nrc$part, levels = c("Beginning", "Middle", "End")) # added this line into code to make sure that the graph showed up as beginning, middle, end - the default was beginning, end, middle
+
+```
+
+
+
+```{r, warning= FALSE, message=FALSE, fig.cap = "Figure 3.0: Average Sentiments for each part of the book based on NRC sentiments. Individual words are categorized into sentiments The top ten sentiments for each part of the book are displayed above"}
+ggplot(data = top_nrc, aes(x = sentiment, y =n)) +geom_col(fill = "lightblue") +
+  facet_wrap(~part_reorder)+
+  coord_flip() +
+  labs(x = "Sentiment", y = "Count", title = "Top Ten Sentiments") +
+  theme_light()+
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+
+The overall sentiments throughout Twilight remain relatively consistent over the three parts of the book. The book becomes slightly more negative over time. In the first eight chapters, the Beginning part, has a greater frequency of positive words than negative words. In the middle section of the book, the frequency gap between positive and negative words narrows, and in the ending part of the book negative words are more frequent that positive words. The frequency of words that are categorized as "fear" also increase throughout the story.  This correlates well with the story line of Twilight, as it begins as a love story with a vampire twist in the middle, and Bella's capture and injury in the ending. 
+
+Text Data Citation: 
+Twilight Series. (n.d.). Z Library. Retrieved February 20, 2021, from https://zlibrary.jimdofree.com/twilight-series/
+
+
+
+
