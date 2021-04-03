@@ -1,55 +1,55 @@
-﻿Process,Environmental Impact,Value
-Container Glass,Acidification,0.845714286
-Landfill,Acidification,0.015371429
-GLO: Steel tinplated worldsteel,Acidification,0.010457143
-Transportation,Acidification,0.025028571
-Transportation,Acidification,0.000788571
-Transportation,Acidification,0.09
-Diesel,Acidification,0.010914286
-Electricity,Acidification,6.85714E-05
-Lubricants,Acidification,3.65714E-07
-Container Glass,Ecotoxicity,0.353846154
-Landfill,Ecotoxicity,0.029471154
-GLO: Steel tinplated worldsteel,Ecotoxicity,0.060096154
-Transportation,Ecotoxicity,4.08654E-08
-Transportation,Ecotoxicity,1.49038E-09
-Transportation,Ecotoxicity,1.70192E-07
-Diesel,Ecotoxicity,0.557692308
-Electricity,Ecotoxicity,0.000169712
-Lubricants,Ecotoxicity,1.55288E-05
-Container Glass,Eutrophication,0.756476684
-Landfill,Eutrophication,0.012020725
-GLO: Steel tinplated worldsteel,Eutrophication,0.012435233
-Transportation,Eutrophication,0.029015544
-Transportation,Eutrophication,0.000911917
-Transportation,Eutrophication,0.104145078
-Diesel,Eutrophication,0.08238342
-Electricity,Eutrophication,9.43005E-05
-Lubricants,Eutrophication,5.59585E-07
-Container Glass,Global Warming Air,0.821782178
-Landfill,Global Warming Air,0.012937294
-GLO: Steel tinplated worldsteel,Global Warming Air,0.024587459
-Transportation,Global Warming Air,0.026072607
-Transportation,Global Warming Air,0.000856436
-Transportation,Global Warming Air,0.097689769
-Diesel,Global Warming Air,0.015561056
-Electricity,Global Warming Air,0.000260726
-Lubricants,Global Warming Air,1.21452E-06
-Container Glass,Smog Air,0.783486239
-Landfill,Smog Air,0.018715596
-GLO: Steel tinplated worldsteel,Smog Air,0.011082569
-Transportation,Smog Air,0.037431193
-Transportation,Smog Air,0.001179817
-Transportation,Smog Air,0.134495413
-Diesel,Smog Air,0.013211009
-Electricity,Smog Air,6.27523E-05
-Lubricants,Smog Air,4.56881E-07
-Container Glass,Human Toxicity,0.646011765
-Landfill,Human Toxicity,0.209631504
-GLO: Steel tinplated worldsteel,Human Toxicity,0.014841964
-Transportation,Human Toxicity,1.50843E-07
-Transportation,Human Toxicity,5.50154E-09
-Transportation,Human Toxicity,6.26657E-07
-Diesel,Human Toxicity,0.128086805
-Electricity,Human Toxicity,9.52848E-05
-Lubricants,Human Toxicity,3.27044E-06
+﻿Process,Environmental Impact,Value,steps,percent value
+Container Glass,Acidification (kg SO2 eq.),0.845714286,Production,84.5714286
+Landfill,Acidification (kg SO2 eq.),0.015371429,End of Life,1.5371429
+GLO: Steel tinplated worldsteel,Acidification (kg SO2 eq.),0.010457143,Production,1.0457143
+Transportation,Acidification (kg SO2 eq.),0.025028571,Transportation,2.5028571
+Transportation,Acidification (kg SO2 eq.),0.000788571,Transportation,0.0788571
+Transportation,Acidification (kg SO2 eq.),0.09,Transportation,9
+Diesel,Acidification (kg SO2 eq.),0.010914286,Transportation,1.0914286
+Electricity,Acidification (kg SO2 eq.),6.86E-05,Production,0.00686
+Lubricants,Acidification (kg SO2 eq.),3.66E-07,Production,0.0000366
+Container Glass,Ecotoxicity (CTUe),0.353846154,Production,35.3846154
+Landfill,Ecotoxicity (CTUe),0.029471154,End of Life,2.9471154
+GLO: Steel tinplated worldsteel,Ecotoxicity (CTUe),0.060096154,Production,6.0096154
+Transportation,Ecotoxicity (CTUe),4.09E-08,Transportation,0.00000409
+Transportation,Ecotoxicity (CTUe),1.49E-09,Transportation,0.000000149
+Transportation,Ecotoxicity (CTUe),1.70E-07,Transportation,0.000017
+Diesel,Ecotoxicity (CTUe),0.557692308,Transportation,55.7692308
+Electricity,Ecotoxicity (CTUe),0.000169712,Production,0.0169712
+Lubricants,Ecotoxicity (CTUe),1.55E-05,Production,0.00155
+Container Glass,Eutrophication (kg N eq.),0.756476684,Production,75.6476684
+Landfill,Eutrophication (kg N eq.),0.012020725,End of Life,1.2020725
+GLO: Steel tinplated worldsteel,Eutrophication (kg N eq.),0.012435233,Production,1.2435233
+Transportation,Eutrophication (kg N eq.),0.029015544,Transportation,2.9015544
+Transportation,Eutrophication (kg N eq.),0.000911917,Transportation,0.0911917
+Transportation,Eutrophication (kg N eq.),0.104145078,Transportation,10.4145078
+Diesel,Eutrophication (kg N eq.),0.08238342,Transportation,8.238342
+Electricity,Eutrophication (kg N eq.),9.43E-05,Production,0.00943
+Lubricants,Eutrophication (kg N eq.),5.60E-07,Production,0.000056
+Container Glass,Global Warming (kg CO2 eq.),0.821782178,Production,82.1782178
+Landfill,Global Warming (kg CO2 eq.),0.012937294,End of Life,1.2937294
+GLO: Steel tinplated worldsteel,Global Warming (kg CO2 eq.),0.024587459,Production,2.4587459
+Transportation,Global Warming (kg CO2 eq.),0.026072607,Transportation,2.6072607
+Transportation,Global Warming (kg CO2 eq.),0.000856436,Transportation,0.0856436
+Transportation,Global Warming (kg CO2 eq.),0.097689769,Transportation,9.7689769
+Diesel,Global Warming (kg CO2 eq.),0.015561056,Transportation,1.5561056
+Electricity,Global Warming (kg CO2 eq.),0.000260726,Production,0.0260726
+Lubricants,Global Warming (kg CO2 eq.),1.21E-06,Production,0.000121
+Container Glass,Smog (kg 03 eq.),0.783486239,Production,78.3486239
+Landfill,Smog (kg 03 eq.),0.018715596,End of Life,1.8715596
+GLO: Steel tinplated worldsteel,Smog (kg 03 eq.),0.011082569,Production,1.1082569
+Transportation,Smog (kg 03 eq.),0.037431193,Transportation,3.7431193
+Transportation,Smog (kg 03 eq.),0.001179817,Transportation,0.1179817
+Transportation,Smog (kg 03 eq.),0.134495413,Transportation,13.4495413
+Diesel,Smog (kg 03 eq.),0.013211009,Transportation,1.3211009
+Electricity,Smog (kg 03 eq.),6.28E-05,Production,0.00628
+Lubricants,Smog (kg 03 eq.),4.57E-07,Production,0.0000457
+Container Glass,Human Toxicity (CTUh),0.646011765,Production,64.6011765
+Landfill,Human Toxicity (CTUh),0.209631504,End of Life,20.9631504
+GLO: Steel tinplated worldsteel,Human Toxicity (CTUh),0.014841964,Production,1.4841964
+Transportation,Human Toxicity (CTUh),1.51E-07,Transportation,0.0000151
+Transportation,Human Toxicity (CTUh),5.50E-09,Transportation,0.00000055
+Transportation,Human Toxicity (CTUh),6.27E-07,Transportation,0.0000627
+Diesel,Human Toxicity (CTUh),0.128086805,Transportation,12.8086805
+Electricity,Human Toxicity (CTUh),9.53E-05,Production,0.00953
+Lubricants,Human Toxicity (CTUh),3.27E-06,Production,0.000327

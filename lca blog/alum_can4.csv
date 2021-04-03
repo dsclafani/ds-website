@@ -1,55 +1,55 @@
-﻿Process,Environmental Impact,Value
-Electricity,Acidification,0.009375
-Landfill,Acidification,0.002366071
-Aluminium Refining,Acidification,0.052321429
-Primary Ingot Production,Acidification,0.848214286
-Aluminium Sheet Production,Acidification,0.052857143
-Transportation,Acidification,0.003366071
-Transportation,Acidification,0.005303571
-Transportation,Acidification,0.019196429
-Diesel,Acidification,0.002616071
-Electricity,Ecotoxicity,0.022580645
-Landfill,Ecotoxicity,0.006044143
-Aluminium Refining,Ecotoxicity,0.037860781
-Primary Ingot Production,Ecotoxicity,0.721561969
-Aluminium Sheet Production,Ecotoxicity,0.066213922
-Transportation,Ecotoxicity,6.35E-09
-Transportation,Ecotoxicity,9.80E-09
-Transportation,Ecotoxicity,4.11E-08
-Diesel,Ecotoxicity,0.150933786
-Electricity,Eutrophication,0.026010638
-Landfill,Eutrophication,0.003031915
-Aluminium Refining,Eutrophication,0.099202128
-Primary Ingot Production,Eutrophication,0.664893617
-Aluminium Sheet Production,Eutrophication,0.121542553
-Transportation,Eutrophication,0.006409574
-Transportation,Eutrophication,0.010106383
-Transportation,Eutrophication,0.036702128
-Diesel,Eutrophication,0.032446809
-Electricity,Global Warming Air,0.018779528
-Landfill,Global Warming Air,0.003464567
-Aluminium Refining,Global Warming Air,0.067716535
-Primary Ingot Production,Global Warming Air,0.779527559
-Aluminium Sheet Production,Global Warming Air,0.101968504
-Transportation,Global Warming Air,0.002637795
-Transportation,Global Warming Air,0.004212598
-Transportation,Global Warming Air,0.015944882
-Diesel,Global Warming Air,0.002850394
-Electricity,Smog Air,0.009788732
-Landfill,Smog Air,0.003366197
-Aluminium Refining,Smog Air,0.097887324
-Primary Ingot Production,Smog Air,0.746478873
-Aluminium Sheet Production,Smog Air,0.083802817
-Transportation,Smog Air,0.006183099
-Transportation,Smog Air,0.00971831
-Transportation,Smog Air,0.03528169
-Diesel,Smog Air,0.003887324
-Electricity,Human Toxicity,0.019796584
-Landfill,Human Toxicity,0.032806483
-Aluminium Refining,Human Toxicity,0.019726966
-Primary Ingot Production,Human Toxicity,0.868486892
-Aluminium Sheet Production,Human Toxicity,0.01891983
-Transportation,Human Toxicity,2.37E-08
-Transportation,Human Toxicity,3.65E-08
-Transportation,Human Toxicity,1.53E-07
-Diesel,Human Toxicity,0.035028826
+﻿Process,Environmental Impact,Value,Steps,percent value
+Electricity,Acidification (kg SO2 eq.),0.009375,Production,0.9375
+Landfill,Acidification (kg SO2 eq.),0.002366071,End of Life,0.2366071
+Aluminium Refining,Acidification (kg SO2 eq.),0.052321429,End of Life,5.2321429
+Primary Ingot Production,Acidification (kg SO2 eq.),0.848214286,Production,84.8214286
+Aluminium Sheet Production,Acidification (kg SO2 eq.),0.052857143,Production,5.2857143
+Transportation,Acidification (kg SO2 eq.),0.003366071,Transportation,0.3366071
+Transportation,Acidification (kg SO2 eq.),0.005303571,Transportation,0.5303571
+Transportation,Acidification (kg SO2 eq.),0.019196429,Transportation,1.9196429
+Diesel,Acidification (kg SO2 eq.),0.002616071,Transportation,0.2616071
+Electricity,Ecotoxicity (CTUe),0.022580645,Production,2.2580645
+Landfill,Ecotoxicity (CTUe),0.006044143,End of Life,0.6044143
+Aluminium Refining,Ecotoxicity (CTUe),0.037860781,End of Life,3.7860781
+Primary Ingot Production,Ecotoxicity (CTUe),0.721561969,Production,72.1561969
+Aluminium Sheet Production,Ecotoxicity (CTUe),0.066213922,Production,6.6213922
+Transportation,Ecotoxicity (CTUe),6.35E-09,Transportation,0.000000635
+Transportation,Ecotoxicity (CTUe),9.80E-09,Transportation,0.00000098
+Transportation,Ecotoxicity (CTUe),4.11E-08,Transportation,0.00000411
+Diesel,Ecotoxicity (CTUe),0.150933786,Transportation,15.0933786
+Electricity,Eutrophication (kg N eq.),0.026010638,Production,2.6010638
+Landfill,Eutrophication (kg N eq.),0.003031915,End of Life,0.3031915
+Aluminium Refining,Eutrophication (kg N eq.),0.099202128,End of Life,9.9202128
+Primary Ingot Production,Eutrophication (kg N eq.),0.664893617,Production,66.4893617
+Aluminium Sheet Production,Eutrophication (kg N eq.),0.121542553,Production,12.1542553
+Transportation,Eutrophication (kg N eq.),0.006409574,Transportation,0.6409574
+Transportation,Eutrophication (kg N eq.),0.010106383,Transportation,1.0106383
+Transportation,Eutrophication (kg N eq.),0.036702128,Transportation,3.6702128
+Diesel,Eutrophication (kg N eq.),0.032446809,Transportation,3.2446809
+Electricity,Global Warming (kg CO2 eq.),0.018779528,Production,1.8779528
+Landfill,Global Warming (kg CO2 eq.),0.003464567,End of Life,0.3464567
+Aluminium Refining,Global Warming (kg CO2 eq.),0.067716535,End of Life,6.7716535
+Primary Ingot Production,Global Warming (kg CO2 eq.),0.779527559,Production,77.9527559
+Aluminium Sheet Production,Global Warming (kg CO2 eq.),0.101968504,Production,10.1968504
+Transportation,Global Warming (kg CO2 eq.),0.002637795,Transportation,0.2637795
+Transportation,Global Warming (kg CO2 eq.),0.004212598,Transportation,0.4212598
+Transportation,Global Warming (kg CO2 eq.),0.015944882,Transportation,1.5944882
+Diesel,Global Warming (kg CO2 eq.),0.002850394,Transportation,0.2850394
+Electricity,Smog (kg 03 eq.),0.009788732,Production,0.9788732
+Landfill,Smog (kg 03 eq.),0.003366197,End of Life,0.3366197
+Aluminium Refining,Smog (kg 03 eq.),0.097887324,End of Life,9.7887324
+Primary Ingot Production,Smog (kg 03 eq.),0.746478873,Production,74.6478873
+Aluminium Sheet Production,Smog (kg 03 eq.),0.083802817,Production,8.3802817
+Transportation,Smog (kg 03 eq.),0.006183099,Transportation,0.6183099
+Transportation,Smog (kg 03 eq.),0.00971831,Transportation,0.971831
+Transportation,Smog (kg 03 eq.),0.03528169,Transportation,3.528169
+Diesel,Smog (kg 03 eq.),0.003887324,Transportation,0.3887324
+Electricity,Human Toxicity (CTUh),0.019796584,Production,1.9796584
+Landfill,Human Toxicity (CTUh),0.032806483,End of Life,3.2806483
+Aluminium Refining,Human Toxicity (CTUh),0.019726966,End of Life,1.9726966
+Primary Ingot Production,Human Toxicity (CTUh),0.868486892,Production,86.8486892
+Aluminium Sheet Production,Human Toxicity (CTUh),0.01891983,Production,1.891983
+Transportation,Human Toxicity (CTUh),2.37E-08,Transportation,0.00000237
+Transportation,Human Toxicity (CTUh),3.65E-08,Transportation,0.00000365
+Transportation,Human Toxicity (CTUh),1.53E-07,Transportation,0.0000153
+Diesel,Human Toxicity (CTUh),0.035028826,Transportation,3.5028826

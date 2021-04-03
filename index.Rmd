@@ -13,4 +13,4 @@ output:
 site: distill::distill_website
 ---
  
-Dani is a first year MESM student at the Bren School for Environmental Science & Management specializing in Energy and Climate and Pollution, Prevention, & Remediation.
+Dani is a first year MESM student at the Bren School for Environmental Science & Management specializing in Energy and Climate and Pollution. Dani is interested in working in environmental consulting, specifically in renewable energy.

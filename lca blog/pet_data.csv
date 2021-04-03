@@ -1,79 +1,79 @@
-﻿Process,Environmental Impact,Value
-PET Recycling,Acidification,0.02899729
-Landfill,Acidification,0.01704607
-Water,Acidification,9.08E-07
-Compressed Air,Acidification,0
-Transportation,Acidification,0.018157182
-Transportation,Acidification,0.006910569
-Transportation,Acidification,0.059891599
-Transportation,Acidification,0.00598916
-Blow Molding,Acidification,0
-Polyethylene terephthalate,Acidification,0.651761518
-Polypropylene granulate (PP),Acidification,0.067750678
-Diesel,Acidification,0.008536585
-Electricity,Acidification,0.136856369
-PET Recycling,Ecotoxicity,0.002632375
-Landfill,Ecotoxicity,0.004220877
-Water,Ecotoxicity,2.33E-06
-Compressed Air,Ecotoxicity,0
-Transportation,Ecotoxicity,9.85E-10
-Transportation,Ecotoxicity,3.84E-10
-Transportation,Ecotoxicity,3.75E-09
-Transportation,Ecotoxicity,3.75E-10
-Blow Molding,Ecotoxicity,0
-Polyethylene terephthalate,Ecotoxicity,0.966717095
-Polypropylene granulate (PP),Ecotoxicity,0.000388805
-Diesel,Ecotoxicity,0.014462935
-Electricity,Ecotoxicity,0.011225416
-PET Recycling,Eutrophication,0.292134831
-Landfill,Eutrophication,0.05411985
-Water,Eutrophication,6.57E-06
-Compressed Air,Eutrophication,0
-Transportation,Eutrophication,0.008014981
-Transportation,Eutrophication,0.003052434
-Transportation,Eutrophication,0.026404494
-Transportation,Eutrophication,0.002640449
-Blow Molding,Eutrophication,0
-Polyethylene terephthalate,Eutrophication,0.450187266
-Polypropylene granulate (PP),Eutrophication,0.06835206
-Diesel,Eutrophication,0.024531835
-Electricity,Eutrophication,0.071535581
-PET Recycling,Global Warming Air,0.064390244
-Landfill,Global Warming Air,0.017804878
-Water,Global Warming Air,1.31E-06
-Compressed Air,Global Warming Air,0
-Transportation,Global Warming Air,0.009837398
-Transportation,Global Warming Air,0.003691057
-Transportation,Global Warming Air,0.033821138
-Transportation,Global Warming Air,0.003382114
-Blow Molding,Global Warming Air,0
-Polyethylene terephthalate,Global Warming Air,0.527642276
-Polypropylene granulate (PP),Global Warming Air,0.065203252
-Diesel,Global Warming Air,0.006333333
-Electricity,Global Warming Air,0.269918699
-PET Recycling,Smog Air,0.033691756
-Landfill,Smog Air,0.018458781
-Water,Smog Air,9.00E-07
-Compressed Air,Smog Air,0
-Transportation,Smog Air,0.027956989
-Transportation,Smog Air,0.010645161
-Transportation,Smog Air,0.092114695
-Transportation,Smog Air,0.00921147
-Blow Molding,Smog Air,0
-Polyethylene terephthalate,Smog Air,0.627240143
-Polypropylene granulate (PP),Smog Air,0.041397849
-Diesel,Smog Air,0.010645161
-Electricity,Smog Air,0.128673835
-PET Recycling,Human Toxicity,0.023340774
-Landfill,Human Toxicity,0.160252976
-Water,Human Toxicity,1.99E-05
-Compressed Air,Human Toxicity,0
-Transportation,Human Toxicity,5.63E-08
-Transportation,Human Toxicity,2.20E-08
-Transportation,Human Toxicity,2.15E-07
-Transportation,Human Toxicity,2.15E-08
-Blow Molding,Human Toxicity,0
-Polyethylene terephthalate,Human Toxicity,0.665059524
-Polypropylene granulate (PP),Human Toxicity,0.001059911
-Diesel,Human Toxicity,0.051535714
-Electricity,Human Toxicity,0.098008929
+﻿Process,Environmental Impact,Value,step,percent value
+PET Recycling,Acidification (kg SO2 eq.),0.02899729,End of Life,2.899729
+Landfill,Acidification (kg SO2 eq.),0.01704607,End of Life,1.704607
+Water,Acidification (kg SO2 eq.),9.08E-07,Production,0.0000908
+Compressed Air,Acidification (kg SO2 eq.),0,Production,0
+Transportation,Acidification (kg SO2 eq.),0.018157182,Transportation,1.8157182
+Transportation,Acidification (kg SO2 eq.),0.006910569,Transportation,0.6910569
+Transportation,Acidification (kg SO2 eq.),0.059891599,Transportation,5.9891599
+Transportation,Acidification (kg SO2 eq.),0.00598916,Transportation,0.598916
+Blow Molding,Acidification (kg SO2 eq.),0,Production,0
+Polyethylene terephthalate,Acidification (kg SO2 eq.),0.651761518,Production,65.1761518
+Polypropylene granulate (PP),Acidification (kg SO2 eq.),0.067750678,Production,6.7750678
+Diesel,Acidification (kg SO2 eq.),0.008536585,Transportation,0.8536585
+Electricity,Acidification (kg SO2 eq.),0.136856369,Production,13.6856369
+PET Recycling,Ecotoxicity (CTUe),0.002632375,End of Life,0.2632375
+Landfill,Ecotoxicity (CTUe),0.004220877,End of Life,0.4220877
+Water,Ecotoxicity (CTUe),2.33E-06,Production,0.000233
+Compressed Air,Ecotoxicity (CTUe),0,Production,0
+Transportation,Ecotoxicity (CTUe),9.85E-10,Transportation,9.85E-08
+Transportation,Ecotoxicity (CTUe),3.84E-10,Transportation,3.84E-08
+Transportation,Ecotoxicity (CTUe),3.75E-09,Transportation,0.000000375
+Transportation,Ecotoxicity (CTUe),3.75E-10,Transportation,3.75E-08
+Blow Molding,Ecotoxicity (CTUe),0,Production,0
+Polyethylene terephthalate,Ecotoxicity (CTUe),0.966717095,Production,96.6717095
+Polypropylene granulate (PP),Ecotoxicity (CTUe),0.000388805,Production,0.0388805
+Diesel,Ecotoxicity (CTUe),0.014462935,Transportation,1.4462935
+Electricity,Ecotoxicity (CTUe),0.011225416,Production,1.1225416
+PET Recycling,Eutrophication (kg N eq.),0.292134831,End of Life,29.2134831
+Landfill,Eutrophication (kg N eq.),0.05411985,End of Life,5.411985
+Water,Eutrophication (kg N eq.),6.57E-06,Production,0.000657
+Compressed Air,Eutrophication (kg N eq.),0,Production,0
+Transportation,Eutrophication (kg N eq.),0.008014981,Transportation,0.8014981
+Transportation,Eutrophication (kg N eq.),0.003052434,Transportation,0.3052434
+Transportation,Eutrophication (kg N eq.),0.026404494,Transportation,2.6404494
+Transportation,Eutrophication (kg N eq.),0.002640449,Transportation,0.2640449
+Blow Molding,Eutrophication (kg N eq.),0,Production,0
+Polyethylene terephthalate,Eutrophication (kg N eq.),0.450187266,Production,45.0187266
+Polypropylene granulate (PP),Eutrophication (kg N eq.),0.06835206,Production,6.835206
+Diesel,Eutrophication (kg N eq.),0.024531835,Transportation,2.4531835
+Electricity,Eutrophication (kg N eq.),0.071535581,Production,7.1535581
+PET Recycling,Global Warming (kg CO2 eq.),0.064390244,End of Life,6.4390244
+Landfill,Global Warming (kg CO2 eq.),0.017804878,End of Life,1.7804878
+Water,Global Warming (kg CO2 eq.),1.31E-06,Production,0.000131
+Compressed Air,Global Warming (kg CO2 eq.),0,Production,0
+Transportation,Global Warming (kg CO2 eq.),0.009837398,Transportation,0.9837398
+Transportation,Global Warming (kg CO2 eq.),0.003691057,Transportation,0.3691057
+Transportation,Global Warming (kg CO2 eq.),0.033821138,Transportation,3.3821138
+Transportation,Global Warming (kg CO2 eq.),0.003382114,Transportation,0.3382114
+Blow Molding,Global Warming (kg CO2 eq.),0,Production,0
+Polyethylene terephthalate,Global Warming (kg CO2 eq.),0.527642276,Production,52.7642276
+Polypropylene granulate (PP),Global Warming (kg CO2 eq.),0.065203252,Production,6.5203252
+Diesel,Global Warming (kg CO2 eq.),0.006333333,Transportation,0.6333333
+Electricity,Global Warming (kg CO2 eq.),0.269918699,Production,26.9918699
+PET Recycling,Smog (kg 03 eq.),0.033691756,End of Life,3.3691756
+Landfill,Smog (kg 03 eq.),0.018458781,End of Life,1.8458781
+Water,Smog (kg 03 eq.),9.00E-07,Production,0.00009
+Compressed Air,Smog (kg 03 eq.),0,Production,0
+Transportation,Smog (kg 03 eq.),0.027956989,Transportation,2.7956989
+Transportation,Smog (kg 03 eq.),0.010645161,Transportation,1.0645161
+Transportation,Smog (kg 03 eq.),0.092114695,Transportation,9.2114695
+Transportation,Smog (kg 03 eq.),0.00921147,Transportation,0.921147
+Blow Molding,Smog (kg 03 eq.),0,Production,0
+Polyethylene terephthalate,Smog (kg 03 eq.),0.627240143,Production,62.7240143
+Polypropylene granulate (PP),Smog (kg 03 eq.),0.041397849,Production,4.1397849
+Diesel,Smog (kg 03 eq.),0.010645161,Transportation,1.0645161
+Electricity,Smog (kg 03 eq.),0.128673835,Production,12.8673835
+PET Recycling,Human Toxicity (CTUh),0.023340774,End of Life,2.3340774
+Landfill,Human Toxicity (CTUh),0.160252976,End of Life,16.0252976
+Water,Human Toxicity (CTUh),1.99E-05,Production,0.00199
+Compressed Air,Human Toxicity (CTUh),0,Production,0
+Transportation,Human Toxicity (CTUh),5.63E-08,Transportation,0.00000563
+Transportation,Human Toxicity (CTUh),2.20E-08,Transportation,0.0000022
+Transportation,Human Toxicity (CTUh),2.15E-07,Transportation,0.0000215
+Transportation,Human Toxicity (CTUh),2.15E-08,Transportation,0.00000215
+Blow Molding,Human Toxicity (CTUh),0,Production,0
+Polyethylene terephthalate,Human Toxicity (CTUh),0.665059524,Production,66.5059524
+Polypropylene granulate (PP),Human Toxicity (CTUh),0.001059911,Production,0.1059911
+Diesel,Human Toxicity (CTUh),0.051535714,Transportation,5.1535714
+Electricity,Human Toxicity (CTUh),0.098008929,Production,9.8008929

@@ -1,7 +1,7 @@
 ---
 title: "Life Cycle Assessment: Plastic, Glass, & Aluminium Containers"
 description: |
-  Contribution Analysis from GaBi Education Database.
+  LCA Results from GaBi Education Database.
 author:
   - name: Danielle  Sclafani
     url: {}
@@ -24,7 +24,7 @@ library(patchwork)
 
 ### Introduction
 
-Using a functional unit of 1 Liter of beverage, an LCA is conducted for a glass bottle, a PET bottle and an Aluminium can using the GaBi Education database. The reference flows for each container is listed in Table 1.0.
+Using a functional unit of 1 Liter of beverage, an LCA is conducted for a glass bottle, a PET bottle and an Aluminium can using the GaBi Education database. The reference flows for each container are listed in Table 1.0. 
 
 ```{r}
 #reading in reference flow data
@@ -51,6 +51,7 @@ ref_flow %>% gt %>%
 
 
 ### Contribution Analysis
+Contribution analysis shows the life cycle stages that contribute most to the environmental impact categories of interest. In this case the impact categories chosen are Smog (kg O3 eq.), Human Toxicity Potential (CTUh), Global Warming Potential (kg CO2 eq.), Eutrophication potential (kg N eq.), Ecotoxicity Potential (CTUe), and Acidification Potential (kg SO2 eq.). For the sake of simplicity, unit processes are grouped by life cycle stage including production, transportation, and end of life in the contributional analysis.
 
 ```{r}
 # reading in the csvs of GaBi data for each life cycle
@@ -58,31 +59,141 @@ ref_flow %>% gt %>%
 alum_can4 <- read_csv(here("lca blog", "alum_can4.csv")) %>% 
   clean_names()
 
+alum_can4$steps_order = factor(alum_can4$steps, levels = c("Production", "Transportation", "End of Life"))
+
 pet_bottle <- read_csv(here("lca blog", "pet_data.csv")) %>% 
   clean_names()
 
+pet_bottle$steps_order = factor(pet_bottle$step, levels = c("Production", "Transportation", "End of Life")) # want to make sure the life cycle steps appear in the correct order in the graph
+
 glass_data <- read_csv(here("lca blog", "glass.csv")) %>% 
   clean_names()
+
+glass_data$steps_order = factor(glass_data$steps, levels = c("Production", "Transportation", "End of Life"))
+
 ```
 
-```{r}
- ggplot(data = pet_bottle, aes(x = environmental_impact, y = value)) + geom_col(aes(fill = process))+
+#### Aluminium Can Contributional Analysis  
+```{r, fig.cap="Contributional Analysis of Aluminium Can Life Cycle. Life Cycle stages production, transportation, and end of life make up several unit processes contirbuting to each life cycle stage."}
+ alum_contr_graph <- ggplot(data = alum_can4, aes(x = environmental_impact, y = percent_value)) + geom_col(aes(fill = steps_order))+
+  scale_fill_manual(values = c("skyblue", "aquamarine", "navyblue"))+
   theme_minimal()+
   coord_flip()+
-  labs(x = "", y = "Percent", fill = "Unit Process", title = "PET Bottle")+
-  theme(plot.title = element_text(hjust = 0.5))
+  labs(x = "", y = "Percent", subtitle = "Contribution Analysis of Aluminium Can Life Cycle ",
+       fill = "Life Cycle Stage")+
+  theme(plot.subtitle = element_text(hjust = 0.5), text = element_text(family = "Times New Roman"))
 
-ggplot(data = glass_data, aes(x = environmental_impact, y = value)) + geom_col(aes(fill = process))+
-  theme_minimal()+
-  coord_flip()+
-  labs(x = "", y = "Percent", fill = "Unit Process", title = "Glass Bottle")+
-  theme(plot.title = element_text(hjust = 0.5))
+alum_contr_graph 
 
-ggplot(data = alum_can4, aes(x = environmental_impact, y = value)) + geom_col(aes(fill = process))+
+```
+#### PET Bottle Contributional Analysis 
+```{r, fig.cap="Contributional Analysis of PET Bottle Life Cycle. Life Cycle stages production, transportation, and end of life make up several unit processes contirbuting to each life cycle stage."}
+ggplot(data = pet_bottle, aes(x = environmental_impact, y = percent_value)) + geom_col(aes(fill = steps_order))+
   theme_minimal()+
   coord_flip()+
-  labs(x = "", y = "Percent", fill = "Unit Process", title = "Aluminium Can")+
-  theme(plot.title = element_text(hjust = 0.5))
+  labs(x = "", y = "Percent", subtitle = "Contribution Analysis of PET Bottle Life Cycle",
+       fill = "Life Cycle Stage")+
+  theme(plot.subtitle = element_text(hjust = 0.5), text = element_text(family = "Times New Roman"))+
+  scale_fill_manual(values = c("skyblue", "aquamarine", "navyblue"))
 ```
 
-Contributional analysis shows the unit processes that contribute most to the environmental impact categories of interest. 
+
+```{r, fig.cap="Contributional Analysis of Glass Bottle Life Cycle. Life Cycle stages production, transportation, and end of life make up several unit processes contirbuting to each life cycle stage."}
+ggplot(data = glass_data, aes(x = environmental_impact, y = percent_value)) + geom_col(aes(fill = steps_order))+
+  theme_minimal()+
+  coord_flip()+
+  labs(x = "", y = "Percent", subtitle = "Contribution Analysis of Glass Bottle Life Cycle",
+       fill = "Life Cycle Stage")+
+  theme(plot.subtitle = element_text(hjust = 0.5), text = element_text(family = "Times New Roman"))+ 
+  scale_fill_manual(values = c("skyblue", "aquamarine", "navyblue"))
+```
+
+### Impact Assessment
+The impact assessment compares the three packaging containers, and their contributions to each impact category. The results for the aluminium can and PET bottle are normalized to the glass bottle to allow for better visualization. Normalization to the glass bottle was chosen as the glass bottle has the highest result for each impact category apart from ecotoxicity.
+
+```{r, fig.cap = "Impact Assessment results of glass bottle, PET bottle, and aluminium can life cycles from cradle to grave. All results are normalized to the glass bottle, resulting in the glass bottle having a value of 1 for each impact category."}
+normal <- read.csv(here("lca blog", "normalized_data.csv")) %>% 
+  clean_names()
+
+pet_norm <- normal %>% 
+  filter(bottle == "PET")
+
+glass_norm <- normal %>% 
+  filter(bottle == "Glass Bottle")
+
+alum_norm <- normal %>% 
+  filter(bottle == "Aluminium Can")
+
+normal$bottle_reorder = factor(normal$bottle, levels = c("Glass Bottle (0.575 kg)", "PET (30% rec)", "Aluminium Can (50% rec)"))
+
+norm_results_graph <- ggplot(data = normal, aes(x = environmental_impact, y = value, fill = bottle_reorder)) +geom_col(stat = identity, position = 'dodge')+
+  coord_flip() +
+  labs(x = " ", y = " ", fill = " ", subtitle = "Normalized Impact Assessment Results") +
+  theme_minimal()+
+    scale_fill_manual(values = c("skyblue", "aquamarine", "navyblue"))+
+  theme(plot.subtitle = element_text(hjust= 0.5), text = element_text(family = "Times New Roman"))
+
+norm_results_graph
+```
+
+### Scenario Analysis
+To determine the best packaging method for 1 Liter of beverage, different scenarios are modeled to show the changes in impact results with various recycling rates and mass of the glass bottle. The recycling rate of the glass bottle is not able to be adjusted, as the Gabi Database already accounts for a set recycling rate for the glass bottle system, therefore if recycling processes were included in the glass bottle plan there would be an attributional issue.
+
+#### PET Bottle: 
+Three scenarios are modeled for the PET bottle. The first scenario includes a 0% recycling rate, the second a 30% recycling rate, and the last a 100% recycling rate. 
+
+```{r, fig.cap="PET Scenario modeling results."}
+#reading in the pet_scenario data
+pet_scen <- read_csv(here("lca blog", "pet_scenarios.csv")) %>% 
+  clean_names()
+
+pet_scen$scenario = factor(pet_scen$scenario, levels = c("PET (0% rec)", "PET (30% rec)", "PET (100% rec)"))
+
+pet_scen_graph <- ggplot(data = pet_scen, aes(x = environmental_process, y = normalized_value, fill = scenario)) + geom_col(stat = identity, position = 'dodge')+
+  coord_flip() +
+  labs(x = " ", y = " ", fill = " ", subtitle= "PET Bottle Scenario Analysis Results") +
+  theme_minimal()+
+    scale_fill_manual(values = c("skyblue", "aquamarine", "navyblue"))+
+  theme(plot.subtitle = element_text(hjust= 0.5), text = element_text(family = "Times New Roman"))
+
+pet_scen_graph
+```
+#### Aluminium Can: 
+Three scenarios are modeled for the Aluminium can The first scenario includes a 0% recycling rate, the second a 50% recycling rate, and the last a 100% recycling rate. 
+
+```{r, fig.align="Scenario analysis results of aluminium can life cycle."}
+alum_scens <- read_csv(here("lca blog", "alum_can_scen.csv")) %>% 
+  clean_names()
+
+alum_scens$scenario = factor(alum_scens$scenario, levels = c("Aluminium Can (0% rec)", "Aluminium Can (50% rec)", "Aluminium Can (100% rec)"))
+
+ggplot(data = alum_scens, aes(x = environmental_process, y = normalized_value, fill = scenario)) +geom_col(stat = identity, position = 'dodge')+
+  coord_flip() +
+  labs(x = " ", y = " ", fill = " ", subtitle = "Aluminium Can Scenario Analysis Results") +
+  theme_minimal()+
+    scale_fill_manual(values = c("skyblue", "aquamarine", "navyblue"))+
+  theme(plot.subtitle = element_text(hjust = 0.5), text = element_text(family = "Times New Roman"))
+```
+
+#### Glass Bottle:
+Two scenarios for the glass bottle life cycle are modeled, adjusting the mass of the bottle. The two scenarios are named High Mass and Low Mass, at 575 grams and 452 grams
+
+
+```{r, fig.cap="Scenario analysis ofn glass bottle life cycle."}
+glass_scen <- read_csv(here("lca blog", "glass_scenarios.csv")) %>% 
+  clean_names()
+
+glass_bott_scen <- ggplot(data = glass_scen, aes(x = fct_reorder(environmental_process, mass), y = normalized_value, fill = scenario)) +geom_col(stat = identity, position = 'dodge')+
+  coord_flip() +
+  labs(x = " ", y = "", fill = " ", subtitle = "Glass Bottle Scenario Analysis Results") +
+  theme_minimal()+
+    scale_fill_manual(values = c("skyblue", "navyblue"))+
+  theme(plot.subtitle = element_text(hjust = 0.5), text = element_text(family = "Times New Roman"))
+
+glass_bott_scen
+```
+
+For the full LCA report, please contact Dani Sclafani.
+
+Database Citation:
+Thinkstep (2021) GaBi Database Edu 2021. http://www.gabi-software.com/america/software/gabi-universities/gabi-education-free/. Accessed 18 Mar 2021

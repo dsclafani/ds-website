@@ -1,0 +1,19 @@
+﻿Environmental Process,Scenario,Value,normalized value,recycling rate
+Acidification (kg SO2 eq),PET (0% rec),0.000443,1,0
+Ecotoxicity (CTUe),PET (0% rec),0.0888,1,0
+Eutrophication (kg N eq.),PET (0% rec),4.71E-05,1,0
+Global Warming (kg CO2 eq),PET (0% rec),0.139,1,0
+Smog Air (kg 03 eq),PET (0% rec),0.00661,1,0
+Human Toxicity (CTUh),PET (0% rec),8.49E-09,1,0
+Acidification (kg SO2 eq),PET (30% rec),0.000369,0.832957111,0.3
+Ecotoxicity (CTUe),PET (30% rec),0.0661,0.744369369,0.3
+Eutrophication (kg N eq.),PET (30% rec),5.34E-05,1.133757962,0.3
+Global Warming (kg CO2 eq),PET (30% rec),0.123,0.884892086,0.3
+Smog Air (kg 03 eq),PET (30% rec),0.00558,0.844175492,0.3
+Human Toxicity (CTUh),PET (30% rec),6.72E-09,0.791519435,0.3
+Acidification (kg SO2 eq),PET (100% rec),0.000197,0.44469526,1
+Ecotoxicity (CTUe),PET (100% rec),0.0133,0.149774775,1
+Eutrophication (kg N eq.),PET (100% rec),6.83E-05,1.450106157,1
+Global Warming (kg CO2 eq),PET (100% rec),0.0873,0.628057554,1
+Smog Air (kg 03 eq),PET (100% rec),0.00318,0.481089259,1
+Human Toxicity (CTUh),PET (100% rec),2.61E-09,0.307420495,1

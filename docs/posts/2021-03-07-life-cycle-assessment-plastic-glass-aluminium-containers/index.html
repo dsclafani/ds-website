@@ -20,19 +20,19 @@
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -52,7 +52,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
@@ -117,7 +117,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["life-cycle-assessment-plastic-glass-aluminium-containers_files/anchor-4.2.2/anchor.min.js","life-cycle-assessment-plastic-glass-aluminium-containers_files/bowser-1.9.3/bowser.min.js","life-cycle-assessment-plastic-glass-aluminium-containers_files/distill-2.2.21/template.v2.js","life-cycle-assessment-plastic-glass-aluminium-containers_files/figure-html5/unnamed-chunk-4-1.png","life-cycle-assessment-plastic-glass-aluminium-containers_files/figure-html5/unnamed-chunk-4-2.png","life-cycle-assessment-plastic-glass-aluminium-containers_files/figure-html5/unnamed-chunk-4-3.png","life-cycle-assessment-plastic-glass-aluminium-containers_files/figure-html5/unnamed-chunk-5-1.png","life-cycle-assessment-plastic-glass-aluminium-containers_files/header-attrs-2.7/header-attrs.js","life-cycle-assessment-plastic-glass-aluminium-containers_files/jquery-1.11.3/jquery.min.js","life-cycle-assessment-plastic-glass-aluminium-containers_files/popper-2.6.0/popper.min.js","life-cycle-assessment-plastic-glass-aluminium-containers_files/tippy-6.2.7/tippy-bundle.umd.min.js","life-cycle-assessment-plastic-glass-aluminium-containers_files/tippy-6.2.7/tippy-light-border.css","life-cycle-assessment-plastic-glass-aluminium-containers_files/tippy-6.2.7/tippy.css","life-cycle-assessment-plastic-glass-aluminium-containers_files/tippy-6.2.7/tippy.umd.min.js","life-cycle-assessment-plastic-glass-aluminium-containers_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["life-cycle-assessment-plastic-glass-aluminium-containers_files/anchor-4.2.2/anchor.min.js","life-cycle-assessment-plastic-glass-aluminium-containers_files/bowser-1.9.3/bowser.min.js","life-cycle-assessment-plastic-glass-aluminium-containers_files/distill-2.2.21/template.v2.js","life-cycle-assessment-plastic-glass-aluminium-containers_files/figure-html5/unnamed-chunk-10-1.png","life-cycle-assessment-plastic-glass-aluminium-containers_files/figure-html5/unnamed-chunk-4-1.png","life-cycle-assessment-plastic-glass-aluminium-containers_files/figure-html5/unnamed-chunk-4-2.png","life-cycle-assessment-plastic-glass-aluminium-containers_files/figure-html5/unnamed-chunk-4-3.png","life-cycle-assessment-plastic-glass-aluminium-containers_files/figure-html5/unnamed-chunk-5-1.png","life-cycle-assessment-plastic-glass-aluminium-containers_files/figure-html5/unnamed-chunk-6-1.png","life-cycle-assessment-plastic-glass-aluminium-containers_files/figure-html5/unnamed-chunk-7-1.png","life-cycle-assessment-plastic-glass-aluminium-containers_files/figure-html5/unnamed-chunk-8-1.png","life-cycle-assessment-plastic-glass-aluminium-containers_files/figure-html5/unnamed-chunk-9-1.png","life-cycle-assessment-plastic-glass-aluminium-containers_files/header-attrs-2.7/header-attrs.js","life-cycle-assessment-plastic-glass-aluminium-containers_files/jquery-1.11.3/jquery.min.js","life-cycle-assessment-plastic-glass-aluminium-containers_files/popper-2.6.0/popper.min.js","life-cycle-assessment-plastic-glass-aluminium-containers_files/tippy-6.2.7/tippy-bundle.umd.min.js","life-cycle-assessment-plastic-glass-aluminium-containers_files/tippy-6.2.7/tippy-light-border.css","life-cycle-assessment-plastic-glass-aluminium-containers_files/tippy-6.2.7/tippy.css","life-cycle-assessment-plastic-glass-aluminium-containers_files/tippy-6.2.7/tippy.umd.min.js","life-cycle-assessment-plastic-glass-aluminium-containers_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2352,7 +2352,6 @@ d-appendix d-footnote-list a.footnote-backlink {
   color: var(--hover-color, white);
 }</style>
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.7/header-attrs.js"></script>
   <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
   <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -2413,12 +2412,10 @@ d-appendix d-footnote-list a.footnote-backlink {
 
 <div class="d-article">
 <h3 id="introduction">Introduction</h3>
-<p>Using a functional unit of 1 Liter of beverage, an LCA is conducted for a glass bottle, a PET bottle and an Aluminium can using the GaBi Education database. The reference flows for each container is listed in Table 1.0.</p>
+<p>Using a functional unit of 1 Liter of beverage, an LCA is conducted for a glass bottle, a PET bottle and an Aluminium can using the GaBi Education database. The reference flows for each container are listed in Table 1.0.</p>
 <div class="layout-chunk" data-layout="l-body">
 <details>
-<summary>
-hide
-</summary>
+<summary>hide</summary>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#reading in reference flow data</span>
 <span class='va'>ref_flow</span> <span class='op'>&lt;-</span> <span class='fu'>read_csv</span><span class='op'>(</span><span class='fu'><a href='https://here.r-lib.org//reference/here.html'>here</a></span><span class='op'>(</span><span class='st'>"lca blog"</span>, <span class='st'>"reference_flow.csv"</span><span class='op'>)</span><span class='op'>)</span>
@@ -2428,9 +2425,7 @@ hide
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <details>
-<summary>
-hide
-</summary>
+<summary>hide</summary>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>ref_flow</span> <span class='op'>%&gt;%</span> <span class='va'>gt</span> <span class='op'>%&gt;%</span> 
   <span class='fu'><a href='https://rdrr.io/pkg/gt/man/tab_header.html'>tab_header</a></span><span class='op'>(</span>
@@ -2452,7 +2447,7 @@ hide
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#fzctdhoaix .gt_table {
+#adccmqeazg .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -2477,7 +2472,7 @@ hide
   border-left-color: #D3D3D3;
 }
 
-#fzctdhoaix .gt_heading {
+#adccmqeazg .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2489,7 +2484,7 @@ hide
   border-right-color: #D3D3D3;
 }
 
-#fzctdhoaix .gt_title {
+#adccmqeazg .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2499,7 +2494,7 @@ hide
   border-bottom-width: 0;
 }
 
-#fzctdhoaix .gt_subtitle {
+#adccmqeazg .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2509,13 +2504,13 @@ hide
   border-top-width: 0;
 }
 
-#fzctdhoaix .gt_bottom_border {
+#adccmqeazg .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#fzctdhoaix .gt_col_headings {
+#adccmqeazg .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2530,7 +2525,7 @@ hide
   border-right-color: #D3D3D3;
 }
 
-#fzctdhoaix .gt_col_heading {
+#adccmqeazg .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2550,7 +2545,7 @@ hide
   overflow-x: hidden;
 }
 
-#fzctdhoaix .gt_column_spanner_outer {
+#adccmqeazg .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2562,15 +2557,15 @@ hide
   padding-right: 4px;
 }
 
-#fzctdhoaix .gt_column_spanner_outer:first-child {
+#adccmqeazg .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#fzctdhoaix .gt_column_spanner_outer:last-child {
+#adccmqeazg .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#fzctdhoaix .gt_column_spanner {
+#adccmqeazg .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2582,7 +2577,7 @@ hide
   width: 100%;
 }
 
-#fzctdhoaix .gt_group_heading {
+#adccmqeazg .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2604,7 +2599,7 @@ hide
   vertical-align: middle;
 }
 
-#fzctdhoaix .gt_empty_group_heading {
+#adccmqeazg .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2619,15 +2614,15 @@ hide
   vertical-align: middle;
 }
 
-#fzctdhoaix .gt_from_md > :first-child {
+#adccmqeazg .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#fzctdhoaix .gt_from_md > :last-child {
+#adccmqeazg .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#fzctdhoaix .gt_row {
+#adccmqeazg .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2646,7 +2641,7 @@ hide
   overflow-x: hidden;
 }
 
-#fzctdhoaix .gt_stub {
+#adccmqeazg .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2658,7 +2653,7 @@ hide
   padding-left: 12px;
 }
 
-#fzctdhoaix .gt_summary_row {
+#adccmqeazg .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2668,7 +2663,7 @@ hide
   padding-right: 5px;
 }
 
-#fzctdhoaix .gt_first_summary_row {
+#adccmqeazg .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2678,7 +2673,7 @@ hide
   border-top-color: #D3D3D3;
 }
 
-#fzctdhoaix .gt_grand_summary_row {
+#adccmqeazg .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2688,7 +2683,7 @@ hide
   padding-right: 5px;
 }
 
-#fzctdhoaix .gt_first_grand_summary_row {
+#adccmqeazg .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2698,11 +2693,11 @@ hide
   border-top-color: #D3D3D3;
 }
 
-#fzctdhoaix .gt_striped {
+#adccmqeazg .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#fzctdhoaix .gt_table_body {
+#adccmqeazg .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2711,7 +2706,7 @@ hide
   border-bottom-color: #D3D3D3;
 }
 
-#fzctdhoaix .gt_footnotes {
+#adccmqeazg .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2725,13 +2720,13 @@ hide
   border-right-color: #D3D3D3;
 }
 
-#fzctdhoaix .gt_footnote {
+#adccmqeazg .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#fzctdhoaix .gt_sourcenotes {
+#adccmqeazg .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2745,46 +2740,46 @@ hide
   border-right-color: #D3D3D3;
 }
 
-#fzctdhoaix .gt_sourcenote {
+#adccmqeazg .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#fzctdhoaix .gt_left {
+#adccmqeazg .gt_left {
   text-align: left;
 }
 
-#fzctdhoaix .gt_center {
+#adccmqeazg .gt_center {
   text-align: center;
 }
 
-#fzctdhoaix .gt_right {
+#adccmqeazg .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#fzctdhoaix .gt_font_normal {
+#adccmqeazg .gt_font_normal {
   font-weight: normal;
 }
 
-#fzctdhoaix .gt_font_bold {
+#adccmqeazg .gt_font_bold {
   font-weight: bold;
 }
 
-#fzctdhoaix .gt_font_italic {
+#adccmqeazg .gt_font_italic {
   font-style: italic;
 }
 
-#fzctdhoaix .gt_super {
+#adccmqeazg .gt_super {
   font-size: 65%;
 }
 
-#fzctdhoaix .gt_footnote_marks {
+#adccmqeazg .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="fzctdhoaix" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="adccmqeazg" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   <thead class="gt_header">
     <tr>
       <th colspan="3" class="gt_heading gt_title gt_font_normal" style>Reference Flows<sup class="gt_footnote_marks">1</sup></th>
@@ -2836,71 +2831,219 @@ hide
 </div>
 <p><strong>Table 1.0:</strong> Reference Flows of Glass Bottle, PET Bottle, and Aluminium can used in life cycle assessment. Glass Bottle contains a steel cap, weighing 5 grams. PET Bottle uses 4 gram PP cap.</p>
 <h3 id="contribution-analysis">Contribution Analysis</h3>
+<p>Contribution analysis shows the life cycle stages that contribute most to the environmental impact categories of interest. In this case the impact categories chosen are Smog (kg O3 eq.), Human Toxicity Potential (CTUh), Global Warming Potential (kg CO2 eq.), Eutrophication potential (kg N eq.), Ecotoxicity Potential (CTUe), and Acidification Potential (kg SO2 eq.). For the sake of simplicity, unit processes are grouped by life cycle stage including production, transportation, and end of life in the contributional analysis.</p>
 <div class="layout-chunk" data-layout="l-body">
 <details>
-<summary>
-hide
-</summary>
+<summary>hide</summary>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='co'># reading in the csvs of GaBi data for each life cycle</span>
 
 <span class='va'>alum_can4</span> <span class='op'>&lt;-</span> <span class='fu'>read_csv</span><span class='op'>(</span><span class='fu'><a href='https://here.r-lib.org//reference/here.html'>here</a></span><span class='op'>(</span><span class='st'>"lca blog"</span>, <span class='st'>"alum_can4.csv"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
   <span class='fu'><a href='https://rdrr.io/pkg/janitor/man/clean_names.html'>clean_names</a></span><span class='op'>(</span><span class='op'>)</span>
 
+<span class='va'>alum_can4</span><span class='op'>$</span><span class='va'>steps_order</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>alum_can4</span><span class='op'>$</span><span class='va'>steps</span>, levels <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Production"</span>, <span class='st'>"Transportation"</span>, <span class='st'>"End of Life"</span><span class='op'>)</span><span class='op'>)</span>
+
 <span class='va'>pet_bottle</span> <span class='op'>&lt;-</span> <span class='fu'>read_csv</span><span class='op'>(</span><span class='fu'><a href='https://here.r-lib.org//reference/here.html'>here</a></span><span class='op'>(</span><span class='st'>"lca blog"</span>, <span class='st'>"pet_data.csv"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
   <span class='fu'><a href='https://rdrr.io/pkg/janitor/man/clean_names.html'>clean_names</a></span><span class='op'>(</span><span class='op'>)</span>
 
+<span class='va'>pet_bottle</span><span class='op'>$</span><span class='va'>steps_order</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>pet_bottle</span><span class='op'>$</span><span class='va'>step</span>, levels <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Production"</span>, <span class='st'>"Transportation"</span>, <span class='st'>"End of Life"</span><span class='op'>)</span><span class='op'>)</span> <span class='co'># want to make sure the life cycle steps appear in the correct order in the graph</span>
+
 <span class='va'>glass_data</span> <span class='op'>&lt;-</span> <span class='fu'>read_csv</span><span class='op'>(</span><span class='fu'><a href='https://here.r-lib.org//reference/here.html'>here</a></span><span class='op'>(</span><span class='st'>"lca blog"</span>, <span class='st'>"glass.csv"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
   <span class='fu'><a href='https://rdrr.io/pkg/janitor/man/clean_names.html'>clean_names</a></span><span class='op'>(</span><span class='op'>)</span>
+
+<span class='va'>glass_data</span><span class='op'>$</span><span class='va'>steps_order</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>glass_data</span><span class='op'>$</span><span class='va'>steps</span>, levels <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Production"</span>, <span class='st'>"Transportation"</span>, <span class='st'>"End of Life"</span><span class='op'>)</span><span class='op'>)</span>
 </code></pre>
 </div>
 </details>
+</div>
+<h4 id="aluminium-can-contributional-analysis">Aluminium Can Contributional Analysis</h4>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>hide</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"> <span class='va'>alum_contr_graph</span> <span class='op'>&lt;-</span> <span class='fu'>ggplot</span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>alum_can4</span>, <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>environmental_impact</span>, y <span class='op'>=</span> <span class='va'>percent_value</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'>geom_col</span><span class='op'>(</span><span class='fu'>aes</span><span class='op'>(</span>fill <span class='op'>=</span> <span class='va'>steps_order</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'>scale_fill_manual</span><span class='op'>(</span>values <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"skyblue"</span>, <span class='st'>"aquamarine"</span>, <span class='st'>"navyblue"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'>theme_minimal</span><span class='op'>(</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'>coord_flip</span><span class='op'>(</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'>labs</span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>""</span>, y <span class='op'>=</span> <span class='st'>"Percent"</span>, subtitle <span class='op'>=</span> <span class='st'>"Contribution Analysis of Aluminium Can Life Cycle "</span>,
+       fill <span class='op'>=</span> <span class='st'>"Life Cycle Stage"</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'>theme</span><span class='op'>(</span>plot.subtitle <span class='op'>=</span> <span class='fu'>element_text</span><span class='op'>(</span>hjust <span class='op'>=</span> <span class='fl'>0.5</span><span class='op'>)</span>, text <span class='op'>=</span> <span class='fu'>element_text</span><span class='op'>(</span>family <span class='op'>=</span> <span class='st'>"Times New Roman"</span><span class='op'>)</span><span class='op'>)</span>
+
+<span class='va'>alum_contr_graph</span> 
+</code></pre>
+</div>
+</details>
+<div class="figure"><span id="fig:unnamed-chunk-4"></span>
+<img src="life-cycle-assessment-plastic-glass-aluminium-containers_files/figure-html5/unnamed-chunk-4-1.png" alt="Contributional Analysis of Aluminium Can Life Cycle. Life Cycle stages production, transportation, and end of life make up several unit processes contirbuting to each life cycle stage." width="624" />
+<p class="caption">
+Figure 1: Contributional Analysis of Aluminium Can Life Cycle. Life Cycle stages production, transportation, and end of life make up several unit processes contirbuting to each life cycle stage.
+</p>
+</div>
+</div>
+<h4 id="pet-bottle-contributional-analysis">PET Bottle Contributional Analysis</h4>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>hide</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>ggplot</span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>pet_bottle</span>, <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>environmental_impact</span>, y <span class='op'>=</span> <span class='va'>percent_value</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'>geom_col</span><span class='op'>(</span><span class='fu'>aes</span><span class='op'>(</span>fill <span class='op'>=</span> <span class='va'>steps_order</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'>theme_minimal</span><span class='op'>(</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'>coord_flip</span><span class='op'>(</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'>labs</span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>""</span>, y <span class='op'>=</span> <span class='st'>"Percent"</span>, subtitle <span class='op'>=</span> <span class='st'>"Contribution Analysis of PET Bottle Life Cycle"</span>,
+       fill <span class='op'>=</span> <span class='st'>"Life Cycle Stage"</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'>theme</span><span class='op'>(</span>plot.subtitle <span class='op'>=</span> <span class='fu'>element_text</span><span class='op'>(</span>hjust <span class='op'>=</span> <span class='fl'>0.5</span><span class='op'>)</span>, text <span class='op'>=</span> <span class='fu'>element_text</span><span class='op'>(</span>family <span class='op'>=</span> <span class='st'>"Times New Roman"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'>scale_fill_manual</span><span class='op'>(</span>values <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"skyblue"</span>, <span class='st'>"aquamarine"</span>, <span class='st'>"navyblue"</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+<div class="figure"><span id="fig:unnamed-chunk-5"></span>
+<img src="life-cycle-assessment-plastic-glass-aluminium-containers_files/figure-html5/unnamed-chunk-5-1.png" alt="Contributional Analysis of PET Bottle Life Cycle. Life Cycle stages production, transportation, and end of life make up several unit processes contirbuting to each life cycle stage." width="624" />
+<p class="caption">
+Figure 2: Contributional Analysis of PET Bottle Life Cycle. Life Cycle stages production, transportation, and end of life make up several unit processes contirbuting to each life cycle stage.
+</p>
+</div>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <details>
-<summary>
-hide
-</summary>
+<summary>hide</summary>
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"> <span class='fu'>ggplot</span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>pet_bottle</span>, <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>environmental_impact</span>, y <span class='op'>=</span> <span class='va'>value</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'>geom_col</span><span class='op'>(</span><span class='fu'>aes</span><span class='op'>(</span>fill <span class='op'>=</span> <span class='va'>process</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>ggplot</span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>glass_data</span>, <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>environmental_impact</span>, y <span class='op'>=</span> <span class='va'>percent_value</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'>geom_col</span><span class='op'>(</span><span class='fu'>aes</span><span class='op'>(</span>fill <span class='op'>=</span> <span class='va'>steps_order</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span>
   <span class='fu'>theme_minimal</span><span class='op'>(</span><span class='op'>)</span><span class='op'>+</span>
   <span class='fu'>coord_flip</span><span class='op'>(</span><span class='op'>)</span><span class='op'>+</span>
-  <span class='fu'>labs</span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>""</span>, y <span class='op'>=</span> <span class='st'>"Percent"</span>, fill <span class='op'>=</span> <span class='st'>"Unit Process"</span>, title <span class='op'>=</span> <span class='st'>"PET Bottle"</span><span class='op'>)</span><span class='op'>+</span>
-  <span class='fu'>theme</span><span class='op'>(</span>plot.title <span class='op'>=</span> <span class='fu'>element_text</span><span class='op'>(</span>hjust <span class='op'>=</span> <span class='fl'>0.5</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='fu'>labs</span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>""</span>, y <span class='op'>=</span> <span class='st'>"Percent"</span>, subtitle <span class='op'>=</span> <span class='st'>"Contribution Analysis of Glass Bottle Life Cycle"</span>,
+       fill <span class='op'>=</span> <span class='st'>"Life Cycle Stage"</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'>theme</span><span class='op'>(</span>plot.subtitle <span class='op'>=</span> <span class='fu'>element_text</span><span class='op'>(</span>hjust <span class='op'>=</span> <span class='fl'>0.5</span><span class='op'>)</span>, text <span class='op'>=</span> <span class='fu'>element_text</span><span class='op'>(</span>family <span class='op'>=</span> <span class='st'>"Times New Roman"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span> 
+  <span class='fu'>scale_fill_manual</span><span class='op'>(</span>values <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"skyblue"</span>, <span class='st'>"aquamarine"</span>, <span class='st'>"navyblue"</span><span class='op'>)</span><span class='op'>)</span>
 </code></pre>
 </div>
 </details>
-<img src="life-cycle-assessment-plastic-glass-aluminium-containers_files/figure-html5/unnamed-chunk-4-1.png" width="624" />
+<div class="figure"><span id="fig:unnamed-chunk-6"></span>
+<img src="life-cycle-assessment-plastic-glass-aluminium-containers_files/figure-html5/unnamed-chunk-6-1.png" alt="Contributional Analysis of Glass Bottle Life Cycle. Life Cycle stages production, transportation, and end of life make up several unit processes contirbuting to each life cycle stage." width="624" />
+<p class="caption">
+Figure 3: Contributional Analysis of Glass Bottle Life Cycle. Life Cycle stages production, transportation, and end of life make up several unit processes contirbuting to each life cycle stage.
+</p>
+</div>
+</div>
+<h3 id="impact-assessment">Impact Assessment</h3>
+<p>The impact assessment compares the three packaging containers, and their contributions to each impact category. The results for the aluminium can and PET bottle are normalized to the glass bottle to allow for better visualization. Normalization to the glass bottle was chosen as the glass bottle has the highest result for each impact category apart from ecotoxicity.</p>
+<div class="layout-chunk" data-layout="l-body">
 <details>
-<summary>
-hide
-</summary>
+<summary>hide</summary>
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>ggplot</span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>glass_data</span>, <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>environmental_impact</span>, y <span class='op'>=</span> <span class='va'>value</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'>geom_col</span><span class='op'>(</span><span class='fu'>aes</span><span class='op'>(</span>fill <span class='op'>=</span> <span class='va'>process</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>normal</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/utils/read.table.html'>read.csv</a></span><span class='op'>(</span><span class='fu'><a href='https://here.r-lib.org//reference/here.html'>here</a></span><span class='op'>(</span><span class='st'>"lca blog"</span>, <span class='st'>"normalized_data.csv"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'><a href='https://rdrr.io/pkg/janitor/man/clean_names.html'>clean_names</a></span><span class='op'>(</span><span class='op'>)</span>
+
+<span class='va'>pet_norm</span> <span class='op'>&lt;-</span> <span class='va'>normal</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'><a href='https://rdrr.io/r/stats/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>bottle</span> <span class='op'>==</span> <span class='st'>"PET"</span><span class='op'>)</span>
+
+<span class='va'>glass_norm</span> <span class='op'>&lt;-</span> <span class='va'>normal</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'><a href='https://rdrr.io/r/stats/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>bottle</span> <span class='op'>==</span> <span class='st'>"Glass Bottle"</span><span class='op'>)</span>
+
+<span class='va'>alum_norm</span> <span class='op'>&lt;-</span> <span class='va'>normal</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'><a href='https://rdrr.io/r/stats/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>bottle</span> <span class='op'>==</span> <span class='st'>"Aluminium Can"</span><span class='op'>)</span>
+
+<span class='va'>normal</span><span class='op'>$</span><span class='va'>bottle_reorder</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>normal</span><span class='op'>$</span><span class='va'>bottle</span>, levels <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Glass Bottle (0.575 kg)"</span>, <span class='st'>"PET (30% rec)"</span>, <span class='st'>"Aluminium Can (50% rec)"</span><span class='op'>)</span><span class='op'>)</span>
+
+<span class='va'>norm_results_graph</span> <span class='op'>&lt;-</span> <span class='fu'>ggplot</span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>normal</span>, <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>environmental_impact</span>, y <span class='op'>=</span> <span class='va'>value</span>, fill <span class='op'>=</span> <span class='va'>bottle_reorder</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span><span class='fu'>geom_col</span><span class='op'>(</span>stat <span class='op'>=</span> <span class='va'>identity</span>, position <span class='op'>=</span> <span class='st'>'dodge'</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'>coord_flip</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>labs</span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>" "</span>, y <span class='op'>=</span> <span class='st'>" "</span>, fill <span class='op'>=</span> <span class='st'>" "</span>, subtitle <span class='op'>=</span> <span class='st'>"Normalized Impact Assessment Results"</span><span class='op'>)</span> <span class='op'>+</span>
   <span class='fu'>theme_minimal</span><span class='op'>(</span><span class='op'>)</span><span class='op'>+</span>
-  <span class='fu'>coord_flip</span><span class='op'>(</span><span class='op'>)</span><span class='op'>+</span>
-  <span class='fu'>labs</span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>""</span>, y <span class='op'>=</span> <span class='st'>"Percent"</span>, fill <span class='op'>=</span> <span class='st'>"Unit Process"</span>, title <span class='op'>=</span> <span class='st'>"Glass Bottle"</span><span class='op'>)</span><span class='op'>+</span>
-  <span class='fu'>theme</span><span class='op'>(</span>plot.title <span class='op'>=</span> <span class='fu'>element_text</span><span class='op'>(</span>hjust <span class='op'>=</span> <span class='fl'>0.5</span><span class='op'>)</span><span class='op'>)</span>
+    <span class='fu'>scale_fill_manual</span><span class='op'>(</span>values <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"skyblue"</span>, <span class='st'>"aquamarine"</span>, <span class='st'>"navyblue"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'>theme</span><span class='op'>(</span>plot.subtitle <span class='op'>=</span> <span class='fu'>element_text</span><span class='op'>(</span>hjust<span class='op'>=</span> <span class='fl'>0.5</span><span class='op'>)</span>, text <span class='op'>=</span> <span class='fu'>element_text</span><span class='op'>(</span>family <span class='op'>=</span> <span class='st'>"Times New Roman"</span><span class='op'>)</span><span class='op'>)</span>
+
+<span class='va'>norm_results_graph</span>
 </code></pre>
 </div>
 </details>
-<img src="life-cycle-assessment-plastic-glass-aluminium-containers_files/figure-html5/unnamed-chunk-4-2.png" width="624" />
+<div class="figure"><span id="fig:unnamed-chunk-7"></span>
+<img src="life-cycle-assessment-plastic-glass-aluminium-containers_files/figure-html5/unnamed-chunk-7-1.png" alt="Impact Assessment results of glass bottle, PET bottle, and aluminium can life cycles from cradle to grave. All results are normalized to the glass bottle, resulting in the glass bottle having a value of 1 for each impact category." width="624" />
+<p class="caption">
+Figure 4: Impact Assessment results of glass bottle, PET bottle, and aluminium can life cycles from cradle to grave. All results are normalized to the glass bottle, resulting in the glass bottle having a value of 1 for each impact category.
+</p>
+</div>
+</div>
+<h3 id="scenario-analysis">Scenario Analysis</h3>
+<p>To determine the best packaging method for 1 Liter of beverage, different scenarios are modeled to show the changes in impact results with various recycling rates and mass of the glass bottle. The recycling rate of the glass bottle is not able to be adjusted, as the Gabi Database already accounts for a set recycling rate for the glass bottle system, therefore if recycling processes were included in the glass bottle plan there would be an attributional issue.</p>
+<h4 id="pet-bottle">PET Bottle:</h4>
+<p>Three scenarios are modeled for the PET bottle. The first scenario includes a 0% recycling rate, the second a 30% recycling rate, and the last a 100% recycling rate.</p>
+<div class="layout-chunk" data-layout="l-body">
 <details>
-<summary>
-hide
-</summary>
+<summary>hide</summary>
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>ggplot</span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>alum_can4</span>, <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>environmental_impact</span>, y <span class='op'>=</span> <span class='va'>value</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'>geom_col</span><span class='op'>(</span><span class='fu'>aes</span><span class='op'>(</span>fill <span class='op'>=</span> <span class='va'>process</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#reading in the pet_scenario data</span>
+<span class='va'>pet_scen</span> <span class='op'>&lt;-</span> <span class='fu'>read_csv</span><span class='op'>(</span><span class='fu'><a href='https://here.r-lib.org//reference/here.html'>here</a></span><span class='op'>(</span><span class='st'>"lca blog"</span>, <span class='st'>"pet_scenarios.csv"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'><a href='https://rdrr.io/pkg/janitor/man/clean_names.html'>clean_names</a></span><span class='op'>(</span><span class='op'>)</span>
+
+<span class='va'>pet_scen</span><span class='op'>$</span><span class='va'>scenario</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>pet_scen</span><span class='op'>$</span><span class='va'>scenario</span>, levels <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"PET (0% rec)"</span>, <span class='st'>"PET (30% rec)"</span>, <span class='st'>"PET (100% rec)"</span><span class='op'>)</span><span class='op'>)</span>
+
+<span class='va'>pet_scen_graph</span> <span class='op'>&lt;-</span> <span class='fu'>ggplot</span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>pet_scen</span>, <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>environmental_process</span>, y <span class='op'>=</span> <span class='va'>normalized_value</span>, fill <span class='op'>=</span> <span class='va'>scenario</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'>geom_col</span><span class='op'>(</span>stat <span class='op'>=</span> <span class='va'>identity</span>, position <span class='op'>=</span> <span class='st'>'dodge'</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'>coord_flip</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>labs</span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>" "</span>, y <span class='op'>=</span> <span class='st'>" "</span>, fill <span class='op'>=</span> <span class='st'>" "</span>, subtitle<span class='op'>=</span> <span class='st'>"PET Bottle Scenario Analysis Results"</span><span class='op'>)</span> <span class='op'>+</span>
   <span class='fu'>theme_minimal</span><span class='op'>(</span><span class='op'>)</span><span class='op'>+</span>
-  <span class='fu'>coord_flip</span><span class='op'>(</span><span class='op'>)</span><span class='op'>+</span>
-  <span class='fu'>labs</span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>""</span>, y <span class='op'>=</span> <span class='st'>"Percent"</span>, fill <span class='op'>=</span> <span class='st'>"Unit Process"</span>, title <span class='op'>=</span> <span class='st'>"Aluminium Can"</span><span class='op'>)</span><span class='op'>+</span>
-  <span class='fu'>theme</span><span class='op'>(</span>plot.title <span class='op'>=</span> <span class='fu'>element_text</span><span class='op'>(</span>hjust <span class='op'>=</span> <span class='fl'>0.5</span><span class='op'>)</span><span class='op'>)</span>
+    <span class='fu'>scale_fill_manual</span><span class='op'>(</span>values <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"skyblue"</span>, <span class='st'>"aquamarine"</span>, <span class='st'>"navyblue"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'>theme</span><span class='op'>(</span>plot.subtitle <span class='op'>=</span> <span class='fu'>element_text</span><span class='op'>(</span>hjust<span class='op'>=</span> <span class='fl'>0.5</span><span class='op'>)</span>, text <span class='op'>=</span> <span class='fu'>element_text</span><span class='op'>(</span>family <span class='op'>=</span> <span class='st'>"Times New Roman"</span><span class='op'>)</span><span class='op'>)</span>
+
+<span class='va'>pet_scen_graph</span>
 </code></pre>
 </div>
 </details>
-<p><img src="life-cycle-assessment-plastic-glass-aluminium-containers_files/figure-html5/unnamed-chunk-4-3.png" width="624" /></p>
+<div class="figure"><span id="fig:unnamed-chunk-8"></span>
+<img src="life-cycle-assessment-plastic-glass-aluminium-containers_files/figure-html5/unnamed-chunk-8-1.png" alt="PET Scenario modeling results." width="624" />
+<p class="caption">
+Figure 5: PET Scenario modeling results.
+</p>
 </div>
-<p>Contributional analysis shows the unit processes that contribute most to the environmental impact categories of interest.</p>
+</div>
+<h4 id="aluminium-can">Aluminium Can:</h4>
+<p>Three scenarios are modeled for the Aluminium can The first scenario includes a 0% recycling rate, the second a 50% recycling rate, and the last a 100% recycling rate.</p>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>hide</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>alum_scens</span> <span class='op'>&lt;-</span> <span class='fu'>read_csv</span><span class='op'>(</span><span class='fu'><a href='https://here.r-lib.org//reference/here.html'>here</a></span><span class='op'>(</span><span class='st'>"lca blog"</span>, <span class='st'>"alum_can_scen.csv"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'><a href='https://rdrr.io/pkg/janitor/man/clean_names.html'>clean_names</a></span><span class='op'>(</span><span class='op'>)</span>
+
+<span class='va'>alum_scens</span><span class='op'>$</span><span class='va'>scenario</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>alum_scens</span><span class='op'>$</span><span class='va'>scenario</span>, levels <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Aluminium Can (0% rec)"</span>, <span class='st'>"Aluminium Can (50% rec)"</span>, <span class='st'>"Aluminium Can (100% rec)"</span><span class='op'>)</span><span class='op'>)</span>
+
+<span class='fu'>ggplot</span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>alum_scens</span>, <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>environmental_process</span>, y <span class='op'>=</span> <span class='va'>normalized_value</span>, fill <span class='op'>=</span> <span class='va'>scenario</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span><span class='fu'>geom_col</span><span class='op'>(</span>stat <span class='op'>=</span> <span class='va'>identity</span>, position <span class='op'>=</span> <span class='st'>'dodge'</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'>coord_flip</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>labs</span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>" "</span>, y <span class='op'>=</span> <span class='st'>" "</span>, fill <span class='op'>=</span> <span class='st'>" "</span>, subtitle <span class='op'>=</span> <span class='st'>"Aluminium Can Scenario Analysis Results"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>theme_minimal</span><span class='op'>(</span><span class='op'>)</span><span class='op'>+</span>
+    <span class='fu'>scale_fill_manual</span><span class='op'>(</span>values <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"skyblue"</span>, <span class='st'>"aquamarine"</span>, <span class='st'>"navyblue"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'>theme</span><span class='op'>(</span>plot.subtitle <span class='op'>=</span> <span class='fu'>element_text</span><span class='op'>(</span>hjust <span class='op'>=</span> <span class='fl'>0.5</span><span class='op'>)</span>, text <span class='op'>=</span> <span class='fu'>element_text</span><span class='op'>(</span>family <span class='op'>=</span> <span class='st'>"Times New Roman"</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+<p><img src="life-cycle-assessment-plastic-glass-aluminium-containers_files/figure-html5/unnamed-chunk-9-1.png" width="624" /></p>
+</div>
+<h4 id="glass-bottle">Glass Bottle:</h4>
+<p>Two scenarios for the glass bottle life cycle are modeled, adjusting the mass of the bottle. The two scenarios are named High Mass and Low Mass, which the bottle ranges from 575 grams and 452 grams</p>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>hide</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>glass_scen</span> <span class='op'>&lt;-</span> <span class='fu'>read_csv</span><span class='op'>(</span><span class='fu'><a href='https://here.r-lib.org//reference/here.html'>here</a></span><span class='op'>(</span><span class='st'>"lca blog"</span>, <span class='st'>"glass_scenarios.csv"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'><a href='https://rdrr.io/pkg/janitor/man/clean_names.html'>clean_names</a></span><span class='op'>(</span><span class='op'>)</span>
+
+<span class='va'>glass_bott_scen</span> <span class='op'>&lt;-</span> <span class='fu'>ggplot</span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>glass_scen</span>, <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='fu'>fct_reorder</span><span class='op'>(</span><span class='va'>environmental_process</span>, <span class='va'>mass</span><span class='op'>)</span>, y <span class='op'>=</span> <span class='va'>normalized_value</span>, fill <span class='op'>=</span> <span class='va'>scenario</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span><span class='fu'>geom_col</span><span class='op'>(</span>stat <span class='op'>=</span> <span class='va'>identity</span>, position <span class='op'>=</span> <span class='st'>'dodge'</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'>coord_flip</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>labs</span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>" "</span>, y <span class='op'>=</span> <span class='st'>""</span>, fill <span class='op'>=</span> <span class='st'>" "</span>, subtitle <span class='op'>=</span> <span class='st'>"Glass Bottle Scenario Analysis Results"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>theme_minimal</span><span class='op'>(</span><span class='op'>)</span><span class='op'>+</span>
+    <span class='fu'>scale_fill_manual</span><span class='op'>(</span>values <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"skyblue"</span>, <span class='st'>"navyblue"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'>theme</span><span class='op'>(</span>plot.subtitle <span class='op'>=</span> <span class='fu'>element_text</span><span class='op'>(</span>hjust <span class='op'>=</span> <span class='fl'>0.5</span><span class='op'>)</span>, text <span class='op'>=</span> <span class='fu'>element_text</span><span class='op'>(</span>family <span class='op'>=</span> <span class='st'>"Times New Roman"</span><span class='op'>)</span><span class='op'>)</span>
+
+<span class='va'>glass_bott_scen</span>
+</code></pre>
+</div>
+</details>
+<div class="figure"><span id="fig:unnamed-chunk-10"></span>
+<img src="life-cycle-assessment-plastic-glass-aluminium-containers_files/figure-html5/unnamed-chunk-10-1.png" alt="Scenario analysis ofn glass bottle life cycle." width="624" />
+<p class="caption">
+Figure 6: Scenario analysis ofn glass bottle life cycle.
+</p>
+</div>
+</div>
+<p>For the full LCA report, please contact Dani Sclafani.</p>
+<p>Database Citation: Thinkstep (2021) GaBi Database Edu 2021. <a href="http://www.gabi-software.com/america/software/gabi-universities/gabi-education-free/" class="uri">http://www.gabi-software.com/america/software/gabi-universities/gabi-education-free/</a>. Accessed 18 Mar 2021</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
