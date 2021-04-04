@@ -1,0 +1,55 @@
+﻿Process,Environmental Impact,Value
+Electricity,Acidification,0.009375
+Landfill,Acidification,0.002366071
+Aluminium Refining,Acidification,0.052321429
+Primary Ingot Production,Acidification,0.848214286
+Aluminium Sheet Production,Acidification,0.052857143
+Truck 1,Acidification,0.003366071
+Truck 2,Acidification,0.005303571
+Truck 3,Acidification,0.019196429
+Diesel,Acidification,0.002616071
+Electricity,Ecotoxicity,0.022580645
+Landfill,Ecotoxicity,0.006044143
+Aluminium Refining,Ecotoxicity,0.037860781
+Primary Ingot Production,Ecotoxicity,0.721561969
+Aluminium Sheet Production,Ecotoxicity,0.066213922
+Truck 1,Ecotoxicity,6.34975E-09
+Truck 2,Ecotoxicity,9.79626E-09
+Truck 3,Ecotoxicity,4.10866E-08
+Diesel,Ecotoxicity,0.150933786
+Electricity,Eutrophication,0.026010638
+Landfill,Eutrophication,0.003031915
+Aluminium Refining,Eutrophication,0.099202128
+Primary Ingot Production,Eutrophication,0.664893617
+Aluminium Sheet Production,Eutrophication,0.121542553
+Truck 1,Eutrophication,0.006409574
+Truck 2,Eutrophication,0.010106383
+Truck 3,Eutrophication,0.036702128
+Diesel,Eutrophication,0.032446809
+Electricity,Global Warming Air,0.018779528
+Landfill,Global Warming Air,0.003464567
+Aluminium Refining,Global Warming Air,0.067716535
+Primary Ingot Production,Global Warming Air,0.779527559
+Aluminium Sheet Production,Global Warming Air,0.101968504
+Truck 1,Global Warming Air,0.002637795
+Truck 2,Global Warming Air,0.004212598
+Truck 3,Global Warming Air,0.015944882
+Diesel,Global Warming Air,0.002850394
+Electricity,Smog Air,0.009788732
+Landfill,Smog Air,0.003366197
+Aluminium Refining,Smog Air,0.097887324
+Primary Ingot Production,Smog Air,0.746478873
+Aluminium Sheet Production,Smog Air,0.083802817
+Truck 1,Smog Air,0.006183099
+Truck 2,Smog Air,0.00971831
+Truck 3,Smog Air,0.03528169
+Diesel,Smog Air,0.003887324
+Electricity,Human Cancer  + non Cancer,0.019796584
+Landfill,Human Cancer  + non Cancer,0.032806483
+Aluminium Refining,Human Cancer  + non Cancer,0.019726966
+Primary Ingot Production,Human Cancer  + non Cancer,0.868486892
+Aluminium Sheet Production,Human Cancer  + non Cancer,0.01891983
+Truck 1,Human Cancer  + non Cancer,2.37137E-08
+Truck 2,Human Cancer  + non Cancer,3.65278E-08
+Truck 3,Human Cancer  + non Cancer,1.52725E-07
+Diesel,Human Cancer  + non Cancer,0.035028826

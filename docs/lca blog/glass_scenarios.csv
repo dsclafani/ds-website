@@ -1,0 +1,13 @@
+﻿Environmental Process,Scenario,Value,Normalized value,Mass
+Acidification (kg SO2 eq),Low Mass (452 g),0.00274,1,0.452
+Ecotoxicity (CTUe),Low Mass (452 g),0.0159,1,0.452
+Eutrophication (kg N eq.),Low Mass (452 g),0.000151,1,0.452
+Global Warming (kg CO2 eq),Low Mass (452 g),0.472,1,0.452
+Smog Air (kg 03 eq),Low Mass (452 g),0.0427,1,0.452
+Human Toxicity (CTUh),Low Mass (452 g),2.56E-08,1,0.452
+Acidification (kg SO2 eq),High Mass (575 g),0.0035,1.277372263,0.575
+Ecotoxicity (CTUe),High Mass (575 g),0.0208,1.308176101,0.575
+Eutrophication (kg N eq.),High Mass (575 g),0.000193,1.278145695,0.575
+Global Warming (kg CO2 eq),High Mass (575 g),0.606,1.283898305,0.575
+Smog Air (kg 03 eq),High Mass (575 g),0.0545,1.276346604,0.575
+Human Toxicity (CTUh),High Mass (575 g),3.28E-08,1.28125,0.575

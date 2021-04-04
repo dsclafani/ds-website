@@ -1,0 +1,19 @@
+﻿Environmental impact,Bottle,Value
+Acidification (kg SO2 eq.),Glass Bottle (0.575 kg),1
+Ecotoxicity (CTUe),Glass Bottle (0.575 kg),1
+Eutrophication (kg N eq.),Glass Bottle (0.575 kg),1
+Global Warming (kg CO2 eq.),Glass Bottle (0.575 kg),1
+Smog (kg 03 eq.),Glass Bottle (0.575 kg),1
+Human Toxicity (CTUh),Glass Bottle (0.575 kg),1
+Acidification (kg SO2 eq.),PET (30% rec),0.105428571
+Ecotoxicity (CTUe),PET (30% rec),3.177884615
+Eutrophication (kg N eq.),PET (30% rec),0.276683938
+Global Warming (kg CO2 eq.),PET (30% rec),0.202970297
+Smog (kg 03 eq.),PET (30% rec),0.102385321
+Human Toxicity (CTUh),PET (30% rec),0.204821848
+Acidification (kg SO2 eq.),Aluminium Can (50% rec),0.32
+Ecotoxicity (CTUe),Aluminium Can (50% rec),0.283173077
+Eutrophication (kg N eq.),Aluminium Can (50% rec),0.194818653
+Global Warming (kg CO2 eq.),Aluminium Can (50% rec),0.419141914
+Smog (kg 03 eq.),Aluminium Can (50% rec),0.260550459
+Human Toxicity (CTUh),Aluminium Can (50% rec),0.280197507

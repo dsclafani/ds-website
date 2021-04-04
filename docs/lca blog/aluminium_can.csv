@@ -1,0 +1,61 @@
+﻿Environmental Impacts,Process,Value
+GWP,EU-28: Electricity grid mix ts,0.00477
+GWP,EU-28: Ferro metals on landfill ts,0.00088
+GWP,EU28+EFTA: Aluminium refining: casting alloy ingot from scrap (2010) European Aluminium <p-agg>,0.0172
+GWP,EU28+EFTA: Primary aluminium ingot consumption mix (2015) European Aluminium,0.544
+GWP,EU28+EFTA: Primary aluminium ingot consumption mix (2015) European Aluminium,-0.346
+GWP,EU28+EFTA+Turkey: Aluminium sheet (2015) European Aluminium <p-agg>,0.0259
+GWP,"GLO: Truck, Euro 4, 20 - 26t gross weight / 17.3t payload capacity ts <u-so>",0.00067
+GWP,"GLO: Truck, Euro 4, 20 - 26t gross weight / 17.3t payload capacity ts <u-so>",0.00107
+GWP,"GLO: Truck, Euro 4, 28 - 32t gross weight / 22t payload capacity ts <u-so>",0.00405
+GWP,US: Diesel mix at refinery ts,0.000724
+Acidification,EU-28: Electricity grid mix ts,0.0000105
+Acidification,EU-28: Ferro metals on landfill ts,0.00000265
+Acidification,EU28+EFTA: Aluminium refining: casting alloy ingot from scrap (2010) European Aluminium <p-agg>,0.0000586
+Acidification,EU28+EFTA: Primary aluminium ingot consumption mix (2015) European Aluminium,0.00261
+Acidification,EU28+EFTA: Primary aluminium ingot consumption mix (2015) European Aluminium,-0.00166
+Acidification,EU28+EFTA+Turkey: Aluminium sheet (2015) European Aluminium <p-agg>,0.0000592
+Acidification,"GLO: Truck, Euro 4, 20 - 26t gross weight / 17.3t payload capacity ts <u-so>",0.00000377
+Acidification,"GLO: Truck, Euro 4, 20 - 26t gross weight / 17.3t payload capacity ts <u-so>",0.00000594
+Acidification,"GLO: Truck, Euro 4, 28 - 32t gross weight / 22t payload capacity ts <u-so>",0.0000215
+Acidification,US: Diesel mix at refinery ts,0.00000293
+Eutrophication,EU-28: Electricity grid mix ts,0.000000978
+Eutrophication,EU-28: Ferro metals on landfill ts,0.000000114
+Eutrophication,EU28+EFTA: Aluminium refining: casting alloy ingot from scrap (2010) European Aluminium <p-agg>,0.00000373
+Eutrophication,EU28+EFTA: Primary aluminium ingot consumption mix (2015) European Aluminium,0.0000685
+Eutrophication,EU28+EFTA: Primary aluminium ingot consumption mix (2015) European Aluminium,-0.0000435
+Eutrophication,EU28+EFTA+Turkey: Aluminium sheet (2015) European Aluminium <p-agg>,0.00000457
+Eutrophication,"GLO: Truck, Euro 4, 20 - 26t gross weight / 17.3t payload capacity ts <u-so>",0.000000241
+Eutrophication,"GLO: Truck, Euro 4, 20 - 26t gross weight / 17.3t payload capacity ts <u-so>",0.00000038
+Eutrophication,"GLO: Truck, Euro 4, 28 - 32t gross weight / 22t payload capacity ts <u-so>",0.00000138
+Eutrophication,US: Diesel mix at refinery ts,0.00000122
+Smog,EU-28: Electricity grid mix ts,0.000139
+Smog,EU-28: Ferro metals on landfill ts,0.0000478
+Smog,EU28+EFTA: Aluminium refining: casting alloy ingot from scrap (2010) European Aluminium <p-agg>,0.00139
+Smog,EU28+EFTA: Primary aluminium ingot consumption mix (2015) European Aluminium,0.0292
+Smog,EU28+EFTA: Primary aluminium ingot consumption mix (2015) European Aluminium,-0.0186
+Smog,EU28+EFTA+Turkey: Aluminium sheet (2015) European Aluminium <p-agg>,0.00119
+Smog,"GLO: Truck, Euro 4, 20 - 26t gross weight / 17.3t payload capacity ts <u-so>",0.0000878
+Smog,"GLO: Truck, Euro 4, 20 - 26t gross weight / 17.3t payload capacity ts <u-so>",0.000138
+Smog,"GLO: Truck, Euro 4, 28 - 32t gross weight / 22t payload capacity ts <u-so>",0.000501
+Smog,US: Diesel mix at refinery ts,0.0000552
+Human Toxicity,EU-28: Electricity grid mix ts,1.8199E-10
+Human Toxicity,EU-28: Ferro metals on landfill ts,3.0159E-10
+Human Toxicity,EU28+EFTA: Aluminium refining: casting alloy ingot from scrap (2010) European Aluminium <p-agg>,1.8135E-10
+Human Toxicity,EU28+EFTA: Primary aluminium ingot consumption mix (2015) European Aluminium,2.203E-08
+Human Toxicity,EU28+EFTA: Primary aluminium ingot consumption mix (2015) European Aluminium,-1.4046E-08
+Human Toxicity,EU28+EFTA+Turkey: Aluminium sheet (2015) European Aluminium <p-agg>,1.7393E-10
+Human Toxicity,"GLO: Truck, Euro 4, 20 - 26t gross weight / 17.3t payload capacity ts <u-so>",2.18E-16
+Human Toxicity,"GLO: Truck, Euro 4, 20 - 26t gross weight / 17.3t payload capacity ts <u-so>",3.358E-16
+Human Toxicity,"GLO: Truck, Euro 4, 28 - 32t gross weight / 22t payload capacity ts <u-so>",1.404E-15
+Human Toxicity,US: Diesel mix at refinery ts,3.2202E-10
+Ecotoxicity,EU-28: Electricity grid mix ts,0.000133
+Ecotoxicity,EU-28: Ferro metals on landfill ts,0.0000356
+Ecotoxicity,EU28+EFTA: Aluminium refining: casting alloy ingot from scrap (2010) European Aluminium <p-agg>,0.000223
+Ecotoxicity,EU28+EFTA: Primary aluminium ingot consumption mix (2015) European Aluminium,0.0116
+Ecotoxicity,EU28+EFTA: Primary aluminium ingot consumption mix (2015) European Aluminium,-0.00735
+Ecotoxicity,EU28+EFTA+Turkey: Aluminium sheet (2015) European Aluminium <p-agg>,0.00039
+Ecotoxicity,"GLO: Truck, Euro 4, 20 - 26t gross weight / 17.3t payload capacity ts <u-so>",3.74E-11
+Ecotoxicity,"GLO: Truck, Euro 4, 20 - 26t gross weight / 17.3t payload capacity ts <u-so>",5.77E-11
+Ecotoxicity,"GLO: Truck, Euro 4, 28 - 32t gross weight / 22t payload capacity ts <u-so>",2.42E-10
+Ecotoxicity,US: Diesel mix at refinery ts,0.000889
