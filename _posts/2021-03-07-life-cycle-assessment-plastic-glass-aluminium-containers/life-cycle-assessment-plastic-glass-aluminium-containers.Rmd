@@ -179,7 +179,7 @@ ggplot(data = alum_scens, aes(x = environmental_process, y = normalized_value, f
 Two scenarios for the glass bottle life cycle are modeled, adjusting the mass of the bottle. The two scenarios are named High Mass and Low Mass, at 575 grams and 452 grams
 
 
-```{r, fig.cap="Scenario analysis ofn glass bottle life cycle."}
+```{r, fig.cap="Scenario analysis of glass bottle life cycle."}
 glass_scen <- read_csv(here("lca blog", "glass_scenarios.csv")) %>% 
   clean_names()
 
