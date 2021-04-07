@@ -104,4 +104,4 @@ plot <- ggplot(data = combine_df, aes(y = reorder(country, abs(difference)), x =
 plot
 ```
 
-Experience with using a dumbbell plot to show change over time. This was the first time I used an online resource to find new skills and new techniques to visualize data. Tidy Tuesday is a great change to practive data visualization skills and learn new and interesting ways to present data.
+Experience with using a dumbbell plot to show change over time. This was the first time I used an online resource to find new skills and new techniques to visualize data. Tidy Tuesday is a great change to practice data visualization skills and learn new and interesting ways to present data.
